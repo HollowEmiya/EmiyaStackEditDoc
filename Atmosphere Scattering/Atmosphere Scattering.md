@@ -404,7 +404,7 @@ float3 GetTransmittanceToSun(
 }
 ~~~
 
-![](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/Transmittance_pq.png?raw=true/Sun.png)  
+![](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/Sun.png?raw=true)  
 $$
 \begin{aligned}
 In\;fact\;\alpha_s\;is\;due\;to\;r,but\;the\;dis\;from\;earth\;to\;sun\;is\;very\;far.\\
@@ -428,7 +428,7 @@ $$
 假设太阳光在 q 点到达 p 点前，由于空气粒子发生散射。  
 <font color=#888888>这里以 空气粒子 导致的 Rayleigh 散射为例，如果是气溶胶导致的 Mie 散射，其实是一样的，</font>  
 <font color=#888888>把下述提到的 Rayleigh 换成 <del>我们米米</del> Mie 即可。</font>  
-![ComputationPQ](/singleScattering_Computation.png)  
+![ComputationPQ](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/singleScattering_Computation.png?raw=true)  
 那么到达 p 点的辐射量 受到以下部分影响：
 
 * 来自顶部大气的太阳辐射
@@ -578,6 +578,6 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MTk0MjExOSwzMzQxNDYyMDMsLTQwNz
-A3MDk0OCwtNDgyODQxMzQxXX0=
+eyJoaXN0b3J5IjpbLTEzNzU3MzI1MDcsMzM0MTQ2MjAzLC00MD
+cwNzA5NDgsLTQ4Mjg0MTM0MV19
 -->
