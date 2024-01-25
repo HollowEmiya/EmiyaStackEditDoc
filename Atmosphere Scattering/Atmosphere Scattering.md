@@ -1,5 +1,7 @@
 # New 大气散射
+
 ## Transmittance 透光率
+
 光线在大气层中从一点 **$\mathrm{p}$** 到达一点 **$\mathrm{q}$** ，由于空气中粒子的存在可能会发生光的能量被吸收或者散射到别的地方去。  
 因此到达 **$\mathrm{q}$** 的光线只是 **$\mathrm{p}$** 的一部分，这部分光存留多少取决于光的波长，被称为 [Transmittance]([Transmittance - Wikipedia](https://en.wikipedia.org/wiki/Transmittance)) (透光率)。
 
@@ -29,7 +31,7 @@ $$
 这里只模拟大气散射，所以对一个星球我们只关心 大气 和 非大气部分，大气底部的球体大小用 atmosphere_bottom_radius 定义，而 大气顶部即 非大气球体+大气厚度 用 atmosphere_top_radius 定义。
 下图的最下面的曲线表示的就是非大气部分——atmosphere_bottom_radius, 最外边的是 atmosphere_top_radius.
 
-<img src="computation-0.png">
+![enter image description here](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/computation-0.png?raw=true)
 
 还有 pq 的 transmittance 和 qp 的 transmittance 是一样的，这和方向无关。  
 所以计算任意两点间的 Transmittance 我们只需要知道 一点 **p** 和与大气顶部的交点 **i**。  
@@ -575,6 +577,6 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNTQwMTk4LC00MDcwNzA5NDgsLTQ4Mj
+eyJoaXN0b3J5IjpbMzM0MTQ2MjAzLC00MDcwNzA5NDgsLTQ4Mj
 g0MTM0MV19
 -->
