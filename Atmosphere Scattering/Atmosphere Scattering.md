@@ -339,7 +339,7 @@ float3 GetTransmittanceToTopAtmosphereBoudary(
 c++设有一点p在大气中，沿和天顶夹角 θ方向和大气顶部交于 i，该路径上有一点 q，q 距离 p 为 d。
 则 $r_d=||oq||=\sqrt{d^2+2dr\cos\theta+r^2}$, $\cos\theta_d={\vec{oq}\cdot\vec{pi}}\,/\,{||\vec{oq}||*||\vec{pi}||}=(r\cos\theta+d)/r_d$ 
 有了 q 点的 r 和 μ，我们用之前得到的 transmittance_tex 就能够计算大气中 p, q 两点之间的 transmittance 了。  
-![enter image description here](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/atmosphere_thread.png?raw=true)
+![enter image description here](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/atmosphere_thetad.png?raw=true)
 [atmosphere_rd - GeoGebra](https://www.geogebra.org/geometry/z8a3uxa3)
 要计算pq的 transmittance 只需要用 $T(\vec{pq})=T(\vec{pi}) / T(\vec{qi})$
 
@@ -378,7 +378,7 @@ float3 GetTransmittance(
 
 c++如果以 $r$ 和 $\mu即\cos\theta$ 来定义射线和地球相交，这里的 `ray_r_cosTheta_intersects_ground` 应该为`true`。这里不会用 `RayIntersectsGround` 计算是否相交，因为这样计算的话，当射线非常接近地平线(视界线)时由于浮点数的精度问题会导致计算结果错误。[^0]后面我们有更好的方法来计算射线和地球相交。  
 为什么和地面相交要反着算：
-![Transmittance](/Transmittance_pq.png)  
+![Transmittance](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/Transmittance_pq.png?raw=true)  
 [Transmittance_Pq](https://www.geogebra.org/geometry/tuahqrt2)  
 最后我们需要大气中某一点到太阳的 Transmittance。太阳不是点光源，所以这是对太阳球盘的积分。  
 我们可以认为在太阳球盘的积分是一个常数，除非在地平线(视界线)以下为零的这种情况。  
@@ -404,7 +404,7 @@ float3 GetTransmittanceToSun(
 }
 ~~~
 
-![](/Sun.png)  
+![](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/Transmittance_pq.png?raw=true/Sun.png)  
 $$
 \begin{aligned}
 In\;fact\;\alpha_s\;is\;due\;to\;r,but\;the\;dis\;from\;earth\;to\;sun\;is\;very\;far.\\
@@ -578,6 +578,6 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIyMDQ5NTgsMzM0MTQ2MjAzLC00MDcwNz
-A5NDgsLTQ4Mjg0MTM0MV19
+eyJoaXN0b3J5IjpbLTM2MTk0MjExOSwzMzQxNDYyMDMsLTQwNz
+A3MDk0OCwtNDgyODQxMzQxXX0=
 -->
