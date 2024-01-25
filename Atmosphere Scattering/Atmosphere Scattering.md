@@ -601,6 +601,10 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	float discriminant = 
 		r_mu * r_mu - r * r + 
 		atmosphere.bottom_radius * atmosphere.bottom_radius;
+	float u_mu;
+	if(ray_r_mu_intersects_ground)
+	{
+	}
 }
 ~~~
 ## 参考
@@ -617,9 +621,16 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4OTg1ODA3MiwxNzgzNzkwNTQ5LDIwNT
-M5NDEzNzksLTIxMDAxMjU4MzIsLTk4Mzk5ODc5MiwtMTE2OTM2
-NjM1NSwtNjE5OTk2MjI0LDYxMzM0NjAwNCw2NTc2NzU0NjAsMT
-Q4MzQyNjIxMywtMTM3NTczMjUwNywzMzQxNDYyMDMsLTQwNzA3
-MDk0OCwtNDgyODQxMzQxXX0=
+eyJkaXNjdXNzaW9ucyI6eyJGUDZ1dU9HcGQ4Wno1NFdtIjp7In
+N0YXJ0IjoyMjk3NywiZW5kIjoyMzAwMywidGV4dCI6InJheV9y
+X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
+JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
+NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
+RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMz
+g0MDg5ODM3LC03ODk4NTgwNzIsMTc4Mzc5MDU0OSwyMDUzOTQx
+Mzc5LC0yMTAwMTI1ODMyLC05ODM5OTg3OTIsLTExNjkzNjYzNT
+UsLTYxOTk5NjIyNCw2MTMzNDYwMDQsNjU3Njc1NDYwLDE0ODM0
+MjYyMTMsLTEzNzU3MzI1MDcsMzM0MTQ2MjAzLC00MDcwNzA5ND
+gsLTQ4Mjg0MTM0MV19
 -->
