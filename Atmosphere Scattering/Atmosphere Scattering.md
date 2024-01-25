@@ -574,7 +574,7 @@ $$
 $$
 和 4D texture 对应 $(r,\mu,\mu_s,\nu)\rightarrow(u,v,w,z)$，下面的映射基于Eric 的 paper:[Precomputed Atmospheric Scattering](https://inria.hal.science/inria-00288758/en) 并有部分改进()：
 * $\mu:\cos\theta$ 的映射考虑到最近大气层的最小距离，将 $\mu$ 映射到 $[0,1]$，原始方法未能覆盖$[0,1]$所有值。
-* $\mu_s:\cos\theta_{sun}$ 的映射比 paper 里的要复杂
+* $\mu_s:\cos\theta_{sun}$ 的映射比 paper 里的要复杂，原本映射是
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -589,7 +589,7 @@ $$
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMjA5MTg5OCw2NTc2NzU0NjAsMTQ4Mz
-QyNjIxMywtMTM3NTczMjUwNywzMzQxNDYyMDMsLTQwNzA3MDk0
-OCwtNDgyODQxMzQxXX0=
+eyJoaXN0b3J5IjpbNjEzMzQ2MDA0LDY1NzY3NTQ2MCwxNDgzND
+I2MjEzLC0xMzc1NzMyNTA3LDMzNDE0NjIwMywtNDA3MDcwOTQ4
+LC00ODI4NDEzNDFdfQ==
 -->
