@@ -572,8 +572,8 @@ $$
 &\nu:\cos\theta_{s_d}\;\; sun \; direction \; to \; ray\; direction.
 \end{aligned}
 $$
-和 4D texture 对应 $(r,\mu,\mu_s,\nu)\rightarrow(u,v,w,z)$，下面的映射基于Eric 的 paper:[Precomputed Atmospheric Scattering](https://inria.hal.science/inria-00288758/en) 并有部分改进
-
+和 4D texture 对应 $(r,\mu,\mu_s,\nu)\rightarrow(u,v,w,z)$，下面的映射基于Eric 的 paper:[Precomputed Atmospheric Scattering](https://inria.hal.science/inria-00288758/en) 并有部分改进()：
+* $\mu:\cos\theta$
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -588,7 +588,7 @@ $$
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTM1MDcyNDksMTQ4MzQyNjIxMywtMT
+eyJoaXN0b3J5IjpbLTE1OTk3Mjg0MTMsMTQ4MzQyNjIxMywtMT
 M3NTczMjUwNywzMzQxNDYyMDMsLTQwNzA3MDk0OCwtNDgyODQx
 MzQxXX0=
 -->
