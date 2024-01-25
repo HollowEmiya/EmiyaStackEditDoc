@@ -571,7 +571,7 @@ $$
 &\nu:\cos\theta_{s_d}\;\; sun \; direction \; to \; ray\; direction.
 \end{aligned}
 $$
-和 4D texture 对应
+和 4D texture 对应 $(r,\mu,\mu_s,\nu)\rightarrow(u,v,w,z)$，下面的映射基于 
 
 ## 参考
 
@@ -587,6 +587,6 @@ $$
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMzIyMjcwNiwtMTM3NTczMjUwNywzMz
+eyJoaXN0b3J5IjpbMTQ4MzQyNjIxMywtMTM3NTczMjUwNywzMz
 QxNDYyMDMsLTQwNzA3MDk0OCwtNDgyODQxMzQxXX0=
 -->
