@@ -581,7 +581,12 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	Length r, float mu, float mu_s, float nu,
 	bool ray_r_mu_intersects_ground)
 {
+	assert(r >= atmosphere.bottom_radius && r <= atmosphere.top_radius);
+	assert(mu >= -1.0 && mu <= 1.0);
+	assert(mu_s >= -1.0 && mu_s <= 1.0);
+	assert(nu >= -1.0 && nu <= 1.0);
 
+	float H 
 }
 ~~~
 ## 参考
@@ -598,7 +603,7 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMwODA3NDQ5LC02MTk5OTYyMjQsNjEzMz
-Q2MDA0LDY1NzY3NTQ2MCwxNDgzNDI2MjEzLC0xMzc1NzMyNTA3
-LDMzNDE0NjIwMywtNDA3MDcwOTQ4LC00ODI4NDEzNDFdfQ==
+eyJoaXN0b3J5IjpbLTM0NjAyNjEyMiwtNjE5OTk2MjI0LDYxMz
+M0NjAwNCw2NTc2NzU0NjAsMTQ4MzQyNjIxMywtMTM3NTczMjUw
+NywzMzQxNDYyMDMsLTQwNzA3MDk0OCwtNDgyODQxMzQxXX0=
 -->
