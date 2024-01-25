@@ -604,7 +604,7 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	float u_mu;
 	if(ray_r_mu_intersects_ground)
 	{
-		float d = -r_mu - max(0.0f,sqrt(d
+		float d = -r_mu - max(0.0f,sqrt(discriminant);
 	}
 }
 ~~~
@@ -628,8 +628,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMD
-Y5MDgxMjI5LDI1NDM5Njg4NSwtNzg5ODU4MDcyLDE3ODM3OTA1
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOD
+UxNzUxMjE2LDI1NDM5Njg4NSwtNzg5ODU4MDcyLDE3ODM3OTA1
 NDksMjA1Mzk0MTM3OSwtMjEwMDEyNTgzMiwtOTgzOTk4NzkyLC
 0xMTY5MzY2MzU1LC02MTk5OTYyMjQsNjEzMzQ2MDA0LDY1NzY3
 NTQ2MCwxNDgzNDI2MjEzLC0xMzc1NzMyNTA3LDMzNDE0NjIwMy
