@@ -547,7 +547,7 @@ void ComputeSingleScattering(
 }
 ~~~
 
-请注意，我们在`ComputeSingleScatteringIntegrand`中省略了太阳辐照度和散射系数项，但没有省略 phase function，这些项在渲染时添加以获得更好的角度精度。我们在这里提供它们以确保完整性：
+请注意，我们在`ComputeSingleScatteringIntegrand`中省略了太阳辐照度和散射系数项，但没有省略 phase function，这些项在[渲染](https://ebruneton.github.io/precomputed_atmospheric_scattering/atmosphere/functions.glsl.html#rendering)时添加以获得更好的角度精度。我们在这里提供它们以确保完整性：
 ~~~c++
 float3 RayleighPhaseFunction(float cosTheta) {
   float3 k = 3.0 / (16.0 * PI * sr);
@@ -587,6 +587,7 @@ $$
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MzQyNjIxMywtMTM3NTczMjUwNywzMz
-QxNDYyMDMsLTQwNzA3MDk0OCwtNDgyODQxMzQxXX0=
+eyJoaXN0b3J5IjpbMTIwNDMxMjE3NywxNDgzNDI2MjEzLC0xMz
+c1NzMyNTA3LDMzNDE0NjIwMywtNDA3MDcwOTQ4LC00ODI4NDEz
+NDFdfQ==
 -->
