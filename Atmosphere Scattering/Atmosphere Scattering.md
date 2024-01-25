@@ -586,7 +586,10 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	assert(mu_s >= -1.0 && mu_s <= 1.0);
 	assert(nu >= -1.0 && nu <= 1.0);
 	// 在地面的水平射线到大气层顶部的距离
-	float H = sqrt(atmosphere.top_radius * atmosphere.top_radius - atmosphere.bottom_radius * atmosphere.bottom_radius);
+	float H = sqrt(atmosphere.top_radius * atmosphere.top_radius -
+		atmosphere.bottom_radius * atmosphere.bottom_radius);
+
+	float rho = saturate(sqrt(
 }
 ~~~
 ## 参考
@@ -603,7 +606,8 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjkzNjYzNTUsLTYxOTk5NjIyNCw2MT
-MzNDYwMDQsNjU3Njc1NDYwLDE0ODM0MjYyMTMsLTEzNzU3MzI1
-MDcsMzM0MTQ2MjAzLC00MDcwNzA5NDgsLTQ4Mjg0MTM0MV19
+eyJoaXN0b3J5IjpbLTk4Mzk5ODc5MiwtMTE2OTM2NjM1NSwtNj
+E5OTk2MjI0LDYxMzM0NjAwNCw2NTc2NzU0NjAsMTQ4MzQyNjIx
+MywtMTM3NTczMjUwNywzMzQxNDYyMDMsLTQwNzA3MDk0OCwtND
+gyODQxMzQxXX0=
 -->
