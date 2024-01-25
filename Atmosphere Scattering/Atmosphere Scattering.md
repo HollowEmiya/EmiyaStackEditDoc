@@ -594,6 +594,10 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 		atmosphere.bottom_radius * atmosphere.bottom_radius));
 	float u_r = GetTextureCoordFromUnitRange(
 		rho / H, SCATTERING_TEXTURE_R_SIZE );
+
+	//
+	//
+	float r_mu = 
 }
 ~~~
 ## 参考
@@ -610,8 +614,8 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDAxMjU4MzIsLTk4Mzk5ODc5MiwtMT
-E2OTM2NjM1NSwtNjE5OTk2MjI0LDYxMzM0NjAwNCw2NTc2NzU0
-NjAsMTQ4MzQyNjIxMywtMTM3NTczMjUwNywzMzQxNDYyMDMsLT
-QwNzA3MDk0OCwtNDgyODQxMzQxXX0=
+eyJoaXN0b3J5IjpbMzcwMzYyNTAsLTIxMDAxMjU4MzIsLTk4Mz
+k5ODc5MiwtMTE2OTM2NjM1NSwtNjE5OTk2MjI0LDYxMzM0NjAw
+NCw2NTc2NzU0NjAsMTQ4MzQyNjIxMywtMTM3NTczMjUwNywzMz
+QxNDYyMDMsLTQwNzA3MDk0OCwtNDgyODQxMzQxXX0=
 -->
