@@ -599,6 +599,8 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	//
 	float r_mu = r * mu;
 	float discriminant = 
+		r_mu * r_mu - r * r + 
+		atmosphere.bottom_radius * atmosphere.bottom_radius;
 }
 ~~~
 ## 参考
@@ -615,9 +617,9 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4Mzc5MDU0OSwyMDUzOTQxMzc5LC0yMT
-AwMTI1ODMyLC05ODM5OTg3OTIsLTExNjkzNjYzNTUsLTYxOTk5
-NjIyNCw2MTMzNDYwMDQsNjU3Njc1NDYwLDE0ODM0MjYyMTMsLT
-EzNzU3MzI1MDcsMzM0MTQ2MjAzLC00MDcwNzA5NDgsLTQ4Mjg0
-MTM0MV19
+eyJoaXN0b3J5IjpbLTc4OTg1ODA3MiwxNzgzNzkwNTQ5LDIwNT
+M5NDEzNzksLTIxMDAxMjU4MzIsLTk4Mzk5ODc5MiwtMTE2OTM2
+NjM1NSwtNjE5OTk2MjI0LDYxMzM0NjAwNCw2NTc2NzU0NjAsMT
+Q4MzQyNjIxMywtMTM3NTczMjUwNywzMzQxNDYyMDMsLTQwNzA3
+MDk0OCwtNDgyODQxMzQxXX0=
 -->
