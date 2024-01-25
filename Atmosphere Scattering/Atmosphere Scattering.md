@@ -598,6 +598,7 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	//
 	//
 	float r_mu = r * mu;
+	float discriminant = 
 }
 ~~~
 ## 参考
@@ -614,8 +615,9 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1Mzk0MTM3OSwtMjEwMDEyNTgzMiwtOT
-gzOTk4NzkyLC0xMTY5MzY2MzU1LC02MTk5OTYyMjQsNjEzMzQ2
-MDA0LDY1NzY3NTQ2MCwxNDgzNDI2MjEzLC0xMzc1NzMyNTA3LD
-MzNDE0NjIwMywtNDA3MDcwOTQ4LC00ODI4NDEzNDFdfQ==
+eyJoaXN0b3J5IjpbMTc4Mzc5MDU0OSwyMDUzOTQxMzc5LC0yMT
+AwMTI1ODMyLC05ODM5OTg3OTIsLTExNjkzNjYzNTUsLTYxOTk5
+NjIyNCw2MTMzNDYwMDQsNjU3Njc1NDYwLDE0ODM0MjYyMTMsLT
+EzNzU3MzI1MDcsMzM0MTQ2MjAzLC00MDcwNzA5NDgsLTQ4Mjg0
+MTM0MV19
 -->
