@@ -592,9 +592,8 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	// p 点到 planet 的切线长度
 	float rho = max(sqrt(r*r - 
 		atmosphere.bottom_radius * atmosphere.bottom_radius));
-
 	float u_r = GetTextureCoordFromUnitRange(
-		rho / 
+		rho / H, SCATTERING_TEXTURE_R_SIZE );
 }
 ~~~
 ## 参考
@@ -611,8 +610,8 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NTcwMzAwMywtOTgzOTk4NzkyLC0xMT
-Y5MzY2MzU1LC02MTk5OTYyMjQsNjEzMzQ2MDA0LDY1NzY3NTQ2
-MCwxNDgzNDI2MjEzLC0xMzc1NzMyNTA3LDMzNDE0NjIwMywtND
-A3MDcwOTQ4LC00ODI4NDEzNDFdfQ==
+eyJoaXN0b3J5IjpbLTIxMDAxMjU4MzIsLTk4Mzk5ODc5MiwtMT
+E2OTM2NjM1NSwtNjE5OTk2MjI0LDYxMzM0NjAwNCw2NTc2NzU0
+NjAsMTQ4MzQyNjIxMywtMTM3NTczMjUwNywzMzQxNDYyMDMsLT
+QwNzA3MDk0OCwtNDgyODQxMzQxXX0=
 -->
