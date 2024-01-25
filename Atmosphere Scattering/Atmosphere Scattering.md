@@ -589,7 +589,11 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	float H = sqrt(atmosphere.top_radius * atmosphere.top_radius -
 		atmosphere.bottom_radius * atmosphere.bottom_radius);
 
-	float rho = saturate(sqrt(
+	
+	float rho = max(sqrt(r*r - 
+		atmosphere.bottom_radius * atmosphere.bottom_radius));
+
+	
 }
 ~~~
 ## 参考
@@ -606,8 +610,8 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4Mzk5ODc5MiwtMTE2OTM2NjM1NSwtNj
-E5OTk2MjI0LDYxMzM0NjAwNCw2NTc2NzU0NjAsMTQ4MzQyNjIx
-MywtMTM3NTczMjUwNywzMzQxNDYyMDMsLTQwNzA3MDk0OCwtND
-gyODQxMzQxXX0=
+eyJoaXN0b3J5IjpbLTIxMTQzMDgwMTcsLTk4Mzk5ODc5MiwtMT
+E2OTM2NjM1NSwtNjE5OTk2MjI0LDYxMzM0NjAwNCw2NTc2NzU0
+NjAsMTQ4MzQyNjIxMywtMTM3NTczMjUwNywzMzQxNDYyMDMsLT
+QwNzA3MDk0OCwtNDgyODQxMzQxXX0=
 -->
