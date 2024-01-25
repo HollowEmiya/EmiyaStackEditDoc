@@ -174,7 +174,8 @@ float ComputeOpticalLengthToAtmosphereBoundary(
 [Nasa Ozone Watch: Ozone facts](https://ozonewatch.gsfc.nasa.gov/facts/SH.html)
 臭氧层是中间厚两边薄的。
 
-> The total mass of ozone in the atmosphere is about 3 billion metric tons. That may seem like a lot, but it is only 0.00006 percent of the atmosphere. The peak concentration of ozone occurs at an altitude of roughly 32 kilometers (20 miles) above the surface of the Earth. At that altitude, ozone concentration can be as high as 15 parts per million (0.0015 percent).<img src="ozone_concentration_graph.gif">
+> The total mass of ozone in the atmosphere is about 3 billion metric tons. That may seem like a lot, but it is only 0.00006 percent of the atmosphere. The peak concentration of ozone occurs at an altitude of roughly 32 kilometers (20 miles) above the surface of the Earth. At that altitude, ozone concentration can be as high as 15 parts per million (0.0015 percent).
+> ![enter image description here](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/ozone_concentration_graph.gif?raw=true)
 
 
 这样就能计算 p，i 之间的 transmittance 了，这里假设pi段不会和地面相交
@@ -577,6 +578,6 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM0MTQ2MjAzLC00MDcwNzA5NDgsLTQ4Mj
-g0MTM0MV19
+eyJoaXN0b3J5IjpbMTUxMTY3NTE5NCwzMzQxNDYyMDMsLTQwNz
+A3MDk0OCwtNDgyODQxMzQxXX0=
 -->
