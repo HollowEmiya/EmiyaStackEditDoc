@@ -572,7 +572,7 @@ $$
 &\nu:\cos\theta_{s_d}\;\; sun \; direction \; to \; ray\; direction.
 \end{aligned}
 $$
-和 4D texture 对应 $(r,\mu,\mu_s,\nu)\rightarrow(u,v,w,z)$，下面的映射基于 
+和 4D texture 对应 $(r,\mu,\mu_s,\nu)\rightarrow(u,v,w,z)$，下面的映射基于Eric 的 paper:[Precomputed Atmospheric Scattering - Inria - Institut national de recherche en sciences et technologies du numérique (hal.science)](https://inria.hal.science/inria-00288758/en) 
 
 ## 参考
 
@@ -588,7 +588,7 @@ $$
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzk0ODI5OTksMTQ4MzQyNjIxMywtMT
-M3NTczMjUwNywzMzQxNDYyMDMsLTQwNzA3MDk0OCwtNDgyODQx
-MzQxXX0=
+eyJoaXN0b3J5IjpbNzQ1MDM0NTAyLDE0ODM0MjYyMTMsLTEzNz
+U3MzI1MDcsMzM0MTQ2MjAzLC00MDcwNzA5NDgsLTQ4Mjg0MTM0
+MV19
 -->
