@@ -271,7 +271,7 @@ float2 GetTransmittanceTextureUvFrom_RAndCosTheta(
 }
 ~~~
 
-
+![enter image description here](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/atmosphere.png?raw=true)
 从这里的 d_min 和 d_max 可以看出这里所有的计算值都是在大气层中且不会和地面相交  
 
 逆 uv 变换为：
@@ -298,7 +298,7 @@ void GetRMuFromTransmittanceTextureUv(AtmosphereParameters atmosphere,
 }
 ~~~
 
-<img src="atmosphere_θ.png">
+![enter image description here](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/atmosphere_%CE%B8.png?raw=true)
 [atmosphere - GeoGebra](https://www.geogebra.org/geometry/ngykf3sz)
 
 现在就能够用片元着色器计算 transmittance 了
@@ -339,7 +339,7 @@ float3 GetTransmittanceToTopAtmosphereBoudary(
 c++设有一点p在大气中，沿和天顶夹角 θ方向和大气顶部交于 i，该路径上有一点 q，q 距离 p 为 d。
 则 $r_d=||oq||=\sqrt{d^2+2dr\cos\theta+r^2}$, $\cos\theta_d={\vec{oq}\cdot\vec{pi}}\,/\,{||\vec{oq}||*||\vec{pi}||}=(r\cos\theta+d)/r_d$ 
 有了 q 点的 r 和 μ，我们用之前得到的 transmittance_tex 就能够计算大气中 p, q 两点之间的 transmittance 了。  
-<img src="atmosphere_thetad.png">
+![enter image description here](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/atmosphere_thread.png?raw=true)
 [atmosphere_rd - GeoGebra](https://www.geogebra.org/geometry/z8a3uxa3)
 要计算pq的 transmittance 只需要用 $T(\vec{pq})=T(\vec{pi}) / T(\vec{qi})$
 
@@ -578,6 +578,6 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2Nzk4NzUwNCwzMzQxNDYyMDMsLTQwNz
-A3MDk0OCwtNDgyODQxMzQxXX0=
+eyJoaXN0b3J5IjpbMzIyMDQ5NTgsMzM0MTQ2MjAzLC00MDcwNz
+A5NDgsLTQ4Mjg0MTM0MV19
 -->
