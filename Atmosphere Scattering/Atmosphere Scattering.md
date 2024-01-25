@@ -245,7 +245,7 @@ d_{max}=\rho+H\\
 H=\sqrt{top\_radius^2-bottom\_radius^2}
 $$
 
-<img src="precomputation-0.png">
+![enter image description here](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/precomputation-0.png?raw=true)
 
 ~~~C++
 float2 GetTransmittanceTextureUvFrom_RAndCosTheta(
@@ -271,7 +271,7 @@ float2 GetTransmittanceTextureUvFrom_RAndCosTheta(
 }
 ~~~
 
-<img src="atmosphere.png">
+
 从这里的 d_min 和 d_max 可以看出这里所有的计算值都是在大气层中且不会和地面相交  
 
 逆 uv 变换为：
@@ -578,6 +578,6 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTY3NTE5NCwzMzQxNDYyMDMsLTQwNz
+eyJoaXN0b3J5IjpbMTc2Nzk4NzUwNCwzMzQxNDYyMDMsLTQwNz
 A3MDk0OCwtNDgyODQxMzQxXX0=
 -->
