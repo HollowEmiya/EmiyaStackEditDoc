@@ -562,7 +562,7 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 
 ### Precomputation
 
-`ComputeSingleScattering` 函数
+`ComputeSingleScattering` 函数的计算开销很大，并且很多计算结果都是计算多重散射所需要的。因此我们可以把计算结果存储到一张 texture 里作为一张 LUT，
 
 ## 参考
 
@@ -578,6 +578,6 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzU3MzI1MDcsMzM0MTQ2MjAzLC00MD
-cwNzA5NDgsLTQ4Mjg0MTM0MV19
+eyJoaXN0b3J5IjpbMTExNjIyMTYyMiwtMTM3NTczMjUwNywzMz
+QxNDYyMDMsLTQwNzA3MDk0OCwtNDgyODQxMzQxXX0=
 -->
