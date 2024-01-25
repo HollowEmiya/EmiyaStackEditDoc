@@ -442,16 +442,16 @@ $$
 因此，设有 指向太阳方向的单位向量 $w_s$ 即 $sun_{direction}$，以及：
 $$
 \begin{aligned}
-r=||\vec{op}||\\
-d=||\vec{pq}||\\
-\mu=\frac{\vec{op}\cdot\vec{pq}}{r*d}\\
-\mu_s=\frac{\vec{op}\cdot w_s}{r}\\
-\nu=\frac{\vec{pq}\cdot{w_s}}{d}\;这里\;\nu\;是\vec{pq}和太阳夹角,\,\\
-\nu是nu不是名扬天下的v\\
-r_d=||\vec{oq}||=\sqrt{d^2+2\mu *d*r+r^2}\\
-\mu_{s,d}=\frac{\vec{oq}\cdot w_s}{r_d}=
-\frac{(\vec{op}+\vec{pq})\cdot w_s}{r_d}=
-\frac{r*\mu_s+v*d}{r_d}
+&r=||\vec{op}||\\
+&d=||\vec{pq}||\\
+&\mu=\frac{\vec{op}\cdot\vec{pq}}{r*d}\\
+&\mu_s=\frac{\vec{op}\cdot w_s}{r}\\
+&\nu=\frac{\vec{pq}\cdot{w_s}}{d}\;这里\;\nu\;是\vec{pq}和太阳夹角,\,\\
+&\nu是nu不是名扬天下的v\\
+&r_d=||\vec{oq}||=\sqrt{d^2+2\mu *d*r+r^2}\\
+&\mu_{s,d}=\frac{\vec{oq}\cdot w_s}{r_d}=
+		\frac{(\vec{op}+\vec{pq})\cdot w_s}{r_d}=
+		\frac{r*\mu_s+v*d}{r_d}
 \end{aligned}
 $$
 Rayleigh Scattering 和 Mie Scattering 计算如下(这里先不带着 太阳辐照度和 Phase Function 计算，也暂时不考虑大气层底部，我们在后面进行处理)：
@@ -571,6 +571,7 @@ $$
 &\nu:\cos\theta_{s_d}\;\; sun \; direction \; to \; ray\; direction.
 \end{aligned}
 $$
+和 4D texture 对应
 
 ## 参考
 
@@ -586,6 +587,6 @@ $$
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMTU3MDMwOCwtMTM3NTczMjUwNywzMz
+eyJoaXN0b3J5IjpbLTYyMzIyMjcwNiwtMTM3NTczMjUwNywzMz
 QxNDYyMDMsLTQwNzA3MDk0OCwtNDgyODQxMzQxXX0=
 -->
