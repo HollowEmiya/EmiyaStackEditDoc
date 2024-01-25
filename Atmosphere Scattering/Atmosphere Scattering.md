@@ -563,7 +563,11 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 ### Precomputation
 
 `ComputeSingleScattering` 函数的计算开销很大，并且很多计算结果都是计算多重散射所需要的。因此我们可以把计算结果存储到一张 texture 里作为一张 LUT，所以我们需要一张 4D texture 来对应 4 个参数$(r,\mu,\mu_s,\nu)$。  
-
+$$
+\begin{aligned}
+r:p\;
+\end{aligned}
+$$
 
 ## 参考
 
@@ -579,6 +583,6 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTE1MDk2NjAsLTEzNzU3MzI1MDcsMz
-M0MTQ2MjAzLC00MDcwNzA5NDgsLTQ4Mjg0MTM0MV19
+eyJoaXN0b3J5IjpbLTQ3ODA1NjgyNywtMTM3NTczMjUwNywzMz
+QxNDYyMDMsLTQwNzA3MDk0OCwtNDgyODQxMzQxXX0=
 -->
