@@ -566,7 +566,8 @@ float3 MiePhaseFunction(float g, float cosTheta) {
 $$
 \begin{aligned}
 r:distance\; of\;p\;from\;planet \; center.\\
-\mu:\cos\theta\;\;ray\; direction\; to
+\mu:\cos\theta\;\;ray\; direction\; to\;zenith.\\
+\mu_s:\cos\theta_s\;\;sun\;direction\;to\;zenith.\\
 \end{aligned}
 $$
 
@@ -584,6 +585,6 @@ $$
 
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI1Njc4NDEsLTEzNzU3MzI1MDcsMzM0MT
-Q2MjAzLC00MDcwNzA5NDgsLTQ4Mjg0MTM0MV19
+eyJoaXN0b3J5IjpbLTYyODQyNDAxNCwtMTM3NTczMjUwNywzMz
+QxNDYyMDMsLTQwNzA3MDk0OCwtNDgyODQxMzQxXX0=
 -->
