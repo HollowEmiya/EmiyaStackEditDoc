@@ -200,8 +200,8 @@ struct AtmoSphereParameters
 	// must be precomputed 
 	// (for maximum precision, use the smallest Sun zenith
 	// angle yielding negligible sky light radiance values.
-	// For instance, for the Earth case, 
-	// 102 degrees is a good choice - yielding mu_s_min = -0.2).
+	// For instance, for the Earth case, 102 degrees 
+	// is a good choice - yielding mu_s_min = -0.2).
 	float mu_s_min;
 };
 
@@ -669,11 +669,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls3Mj
-U2NDc4NTMsLTE2NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTEx
-NDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5NjIsMj
-Q2MzI4OTYyLDIwMzMyNzA3NDAsLTEzNTkxNzA3MTgsLTE0Njgw
-NzUxNjQsMTg1MTc1MTIxNiwyNTQzOTY4ODUsLTc4OTg1ODA3Mi
-wxNzgzNzkwNTQ5LDIwNTM5NDEzNzksLTIxMDAxMjU4MzIsLTk4
-Mzk5ODc5MiwtMTE2OTM2NjM1NSwtNjE5OTk2MjI0XX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+c5ODEwOTU5OSwtMTY3NTE1NTQ1MiwtMjI0NjAxODA0LDEyMzIx
+MTE0MDksMTg1MjcyNjcwNCwtNzE3MDE1MzE1LDI0NjMyODk2Mi
+wyNDYzMjg5NjIsMjAzMzI3MDc0MCwtMTM1OTE3MDcxOCwtMTQ2
+ODA3NTE2NCwxODUxNzUxMjE2LDI1NDM5Njg4NSwtNzg5ODU4MD
+cyLDE3ODM3OTA1NDksMjA1Mzk0MTM3OSwtMjEwMDEyNTgzMiwt
+OTgzOTk4NzkyLC0xMTY5MzY2MzU1LC02MTk5OTYyMjRdfQ==
 -->
