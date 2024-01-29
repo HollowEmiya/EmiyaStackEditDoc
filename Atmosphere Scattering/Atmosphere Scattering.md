@@ -73,7 +73,7 @@ float DistanceToBottomAtmosphereBoundary(float atmoBottomRadius, float r, float 
 }
 ~~~
 
-这里为什么又是 - ，因为 q 点在大气层内，和大气底部(非大气球体)交点在 p 点下部，即 $\cos(\theta) \le 0$。
+这里为什么又是 - ，
 因为假设一定相交，所以要取距离近的交点，所以是 - 。
 
 让 [**p**,**i**] 和非大气球有交点，要保证 $d^2+2r\mu d+r^2=r^2_{bottom}$ 有非负解。  
@@ -679,16 +679,16 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJGUDZ1dU9HcGQ4Wno1NFdtIjp7In
-N0YXJ0IjoyMzQ1NiwiZW5kIjoyMzQ4MiwidGV4dCI6InJheV9y
+N0YXJ0IjoyMzM5OSwiZW5kIjoyMzQyNSwidGV4dCI6InJheV9y
 X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxND
-k1MDMzOTIyLC0xMzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4NzQ5
-NDk4LC0zOTk1OTUzNTksLTkwOTM5MTYxMSw5MDc2NDY5MzcsLT
-E2NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTExNDA5LDE4NTI3
-MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5NjIsMjQ2MzI4OTYyLD
-IwMzMyNzA3NDAsLTEzNTkxNzA3MTgsLTE0NjgwNzUxNjQsMTg1
-MTc1MTIxNiwyNTQzOTY4ODUsLTc4OTg1ODA3Ml19
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls5Mz
+E0MDE4NTgsLTEzODU1Nzc2MDgsMTE3NTMxOTUxMCwyOTg3NDk0
+OTgsLTM5OTU5NTM1OSwtOTA5MzkxNjExLDkwNzY0NjkzNywtMT
+Y3NTE1NTQ1MiwtMjI0NjAxODA0LDEyMzIxMTE0MDksMTg1Mjcy
+NjcwNCwtNzE3MDE1MzE1LDI0NjMyODk2MiwyNDYzMjg5NjIsMj
+AzMzI3MDc0MCwtMTM1OTE3MDcxOCwtMTQ2ODA3NTE2NCwxODUx
+NzUxMjE2LDI1NDM5Njg4NSwtNzg5ODU4MDcyXX0=
 -->
