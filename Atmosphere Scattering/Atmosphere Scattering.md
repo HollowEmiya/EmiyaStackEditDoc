@@ -605,7 +605,7 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	if(ray_r_mu_intersects_ground)
 	{
 		// 射线到地表的距离，这里是指射线到达地表的距离
-		// 其最小值和最大值fu'gai
+		// 其最小值和最大值覆盖所有 mu 值，从 (r,-1) 到 (r,mu_horizon)
 		float d = -r_mu - max(0.0f,sqrt(discriminant);
 		float d_min = r - atmosphere.bottom_radius;
 		float d_max = rho;
@@ -643,11 +643,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-YxNzY3MjgwMSwyNDYzMjg5NjIsMjQ2MzI4OTYyLDIwMzMyNzA3
-NDAsLTEzNTkxNzA3MTgsLTE0NjgwNzUxNjQsMTg1MTc1MTIxNi
-wyNTQzOTY4ODUsLTc4OTg1ODA3MiwxNzgzNzkwNTQ5LDIwNTM5
-NDEzNzksLTIxMDAxMjU4MzIsLTk4Mzk5ODc5MiwtMTE2OTM2Nj
-M1NSwtNjE5OTk2MjI0LDYxMzM0NjAwNCw2NTc2NzU0NjAsMTQ4
-MzQyNjIxMywtMTM3NTczMjUwNywzMzQxNDYyMDNdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls5ND
+cyMTcwNDksMjQ2MzI4OTYyLDI0NjMyODk2MiwyMDMzMjcwNzQw
+LC0xMzU5MTcwNzE4LC0xNDY4MDc1MTY0LDE4NTE3NTEyMTYsMj
+U0Mzk2ODg1LC03ODk4NTgwNzIsMTc4Mzc5MDU0OSwyMDUzOTQx
+Mzc5LC0yMTAwMTI1ODMyLC05ODM5OTg3OTIsLTExNjkzNjYzNT
+UsLTYxOTk5NjIyNCw2MTMzNDYwMDQsNjU3Njc1NDYwLDE0ODM0
+MjYyMTMsLTEzNzU3MzI1MDcsMzM0MTQ2MjAzXX0=
 -->
