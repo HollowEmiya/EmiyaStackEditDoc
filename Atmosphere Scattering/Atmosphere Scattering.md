@@ -663,6 +663,7 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 }
 ~~~
 [uvwz - GeoGebra](https://www.geogebra.org/geometry/hvfwsrc7)
+[Atmo_mu_s | Desmos](https://www.desmos.com/calculator/p6icve4b6c?lang=zh-CN)
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -683,11 +684,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMT
-c1MzE5NTEwLDI5ODc0OTQ5OCwtMzk5NTk1MzU5LC05MDkzOTE2
-MTEsOTA3NjQ2OTM3LC0xNjc1MTU1NDUyLC0yMjQ2MDE4MDQsMT
-IzMjExMTQwOSwxODUyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4
-OTYyLDI0NjMyODk2MiwyMDMzMjcwNzQwLC0xMzU5MTcwNzE4LC
-0xNDY4MDc1MTY0LDE4NTE3NTEyMTYsMjU0Mzk2ODg1LC03ODk4
-NTgwNzIsMTc4Mzc5MDU0OSwyMDUzOTQxMzc5XX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+M4NTU3NzYwOCwxMTc1MzE5NTEwLDI5ODc0OTQ5OCwtMzk5NTk1
+MzU5LC05MDkzOTE2MTEsOTA3NjQ2OTM3LC0xNjc1MTU1NDUyLC
+0yMjQ2MDE4MDQsMTIzMjExMTQwOSwxODUyNzI2NzA0LC03MTcw
+MTUzMTUsMjQ2MzI4OTYyLDI0NjMyODk2MiwyMDMzMjcwNzQwLC
+0xMzU5MTcwNzE4LC0xNDY4MDc1MTY0LDE4NTE3NTEyMTYsMjU0
+Mzk2ODg1LC03ODk4NTgwNzIsMTc4Mzc5MDU0OV19
 -->
