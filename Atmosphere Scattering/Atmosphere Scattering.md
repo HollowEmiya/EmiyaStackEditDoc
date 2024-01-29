@@ -202,6 +202,11 @@ struct AtmoSphereParameters
 	// angle yielding negligible sky light radiance values.
 	// For instance, for the Earth case, 102 degrees 
 	// is a good choice - yielding mu_s_min = -0.2).
+
+	// 余弦值的最大太阳天顶角，需要对大气散射进行预计算
+	//（为了最大精度，请使用使得天空光辐射值可以忽略的最小太阳天顶角。
+	// 例如，对于地球的情况，选择102度是一个不错的选择，
+	// 对应的μ_s_min为-0.2）。
 	float mu_s_min;
 };
 
@@ -664,16 +669,16 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJGUDZ1dU9HcGQ4Wno1NFdtIjp7In
-N0YXJ0IjoyMzMzNywiZW5kIjoyMzM2MywidGV4dCI6InJheV9y
+N0YXJ0IjoyMzQ1NiwiZW5kIjoyMzQ4MiwidGV4dCI6InJheV9y
 X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-c5ODEwOTU5OSwtMTY3NTE1NTQ1MiwtMjI0NjAxODA0LDEyMzIx
-MTE0MDksMTg1MjcyNjcwNCwtNzE3MDE1MzE1LDI0NjMyODk2Mi
-wyNDYzMjg5NjIsMjAzMzI3MDc0MCwtMTM1OTE3MDcxOCwtMTQ2
-ODA3NTE2NCwxODUxNzUxMjE2LDI1NDM5Njg4NSwtNzg5ODU4MD
-cyLDE3ODM3OTA1NDksMjA1Mzk0MTM3OSwtMjEwMDEyNTgzMiwt
-OTgzOTk4NzkyLC0xMTY5MzY2MzU1LC02MTk5OTYyMjRdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls5MD
+c2NDY5MzcsLTE2NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTEx
+NDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5NjIsMj
+Q2MzI4OTYyLDIwMzMyNzA3NDAsLTEzNTkxNzA3MTgsLTE0Njgw
+NzUxNjQsMTg1MTc1MTIxNiwyNTQzOTY4ODUsLTc4OTg1ODA3Mi
+wxNzgzNzkwNTQ5LDIwNTM5NDEzNzksLTIxMDAxMjU4MzIsLTk4
+Mzk5ODc5MiwtMTE2OTM2NjM1NSwtNjE5OTk2MjI0XX0=
 -->
