@@ -631,7 +631,9 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 		atmosphere, atmosphere.bottom_radius, mu_s);
 	float d_min = atmosphere.top_radius - atmosphere.bottom_radius;
 	float d_max = H;
-	float a = (d-d_min)/(d_max-d
+	float a = (d-d_min)/(d_max-d_min);
+	float D = DistanceToTopAtmosphereBoundary(
+		atmosphere, atmosphere.bottom_radius, atmosphere.mu_s_min);
 }
 ~~~
 [uvwz - GeoGebra](https://www.geogebra.org/geometry/hvfwsrc7)
@@ -655,11 +657,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMj
-A5Njg3MTA5MSwxODUyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4
-OTYyLDI0NjMyODk2MiwyMDMzMjcwNzQwLC0xMzU5MTcwNzE4LC
-0xNDY4MDc1MTY0LDE4NTE3NTEyMTYsMjU0Mzk2ODg1LC03ODk4
-NTgwNzIsMTc4Mzc5MDU0OSwyMDUzOTQxMzc5LC0yMTAwMTI1OD
-MyLC05ODM5OTg3OTIsLTExNjkzNjYzNTUsLTYxOTk5NjIyNCw2
-MTMzNDYwMDQsNjU3Njc1NDYwLDE0ODM0MjYyMTNdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMj
+MyMTExNDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5
+NjIsMjQ2MzI4OTYyLDIwMzMyNzA3NDAsLTEzNTkxNzA3MTgsLT
+E0NjgwNzUxNjQsMTg1MTc1MTIxNiwyNTQzOTY4ODUsLTc4OTg1
+ODA3MiwxNzgzNzkwNTQ5LDIwNTM5NDEzNzksLTIxMDAxMjU4Mz
+IsLTk4Mzk5ODc5MiwtMTE2OTM2NjM1NSwtNjE5OTk2MjI0LDYx
+MzM0NjAwNCw2NTc2NzU0NjAsMTQ4MzQyNjIxM119
 -->
