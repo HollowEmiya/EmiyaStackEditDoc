@@ -756,6 +756,7 @@ $$
 \cos(\alpha-\theta)=\cos\alpha\cdot\cos\theta+\sin\alpha\cdot\sin\theta
 \end{aligned}
 $$
+
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -776,8 +777,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOT
-M1MTUyODkwLDEzNzExNTc5NzYsLTEyMDgxNzA2MzEsLTE3Mjgz
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOT
+IxOTA5MTQ0LDEzNzExNTc5NzYsLTEyMDgxNzA2MzEsLTE3Mjgz
 NDQ1ODksLTk2NjEzMzg5MywtMTUzOTQzNjE5NCw3NTUzMTc2Mz
 AsMTU3ODYyODM4NCw5MzE0MDE4NTgsLTEzODU1Nzc2MDgsMTE3
 NTMxOTUxMCwyOTg3NDk0OTgsLTM5OTU5NTM1OSwtOTA5MzkxNj
