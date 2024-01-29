@@ -576,6 +576,7 @@ $$
 * $\mu:\cos\theta$ 的映射考虑到最近大气层的最小距离，将 $\mu$ 映射到 $[0,1]$，原始方法未能覆盖$[0,1]$所有值。
 * $\mu_s:\cos\theta_{sun}$ 的映射比 paper 里的要复杂，(原本映射是使用了为地球大气情况选择的临时参数)，该映射基于到达顶层大气边界的距离（适用于太阳光线），与 μ 映射类似，只使用一个临时（但可配置）的参数。并且，与原始定义一样，它在地平线附近提供了增加的采样率。
 ~~~C++
+// (nu,mu_s,mu,r)
 float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	AtmosphereParameters atmosphere,
 	Length r, float mu, float mu_s, float nu,
@@ -654,16 +655,16 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJGUDZ1dU9HcGQ4Wno1NFdtIjp7In
-N0YXJ0IjoyMjk3NywiZW5kIjoyMzAwMywidGV4dCI6InJheV9y
+N0YXJ0IjoyMjk5NSwiZW5kIjoyMzAyMSwidGV4dCI6InJheV9y
 X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMj
-I0NjAxODA0LDEyMzIxMTE0MDksMTg1MjcyNjcwNCwtNzE3MDE1
-MzE1LDI0NjMyODk2MiwyNDYzMjg5NjIsMjAzMzI3MDc0MCwtMT
-M1OTE3MDcxOCwtMTQ2ODA3NTE2NCwxODUxNzUxMjE2LDI1NDM5
-Njg4NSwtNzg5ODU4MDcyLDE3ODM3OTA1NDksMjA1Mzk0MTM3OS
-wtMjEwMDEyNTgzMiwtOTgzOTk4NzkyLC0xMTY5MzY2MzU1LC02
-MTk5OTYyMjQsNjEzMzQ2MDA0LDY1NzY3NTQ2MF19
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+Y3NTE1NTQ1MiwtMjI0NjAxODA0LDEyMzIxMTE0MDksMTg1Mjcy
+NjcwNCwtNzE3MDE1MzE1LDI0NjMyODk2MiwyNDYzMjg5NjIsMj
+AzMzI3MDc0MCwtMTM1OTE3MDcxOCwtMTQ2ODA3NTE2NCwxODUx
+NzUxMjE2LDI1NDM5Njg4NSwtNzg5ODU4MDcyLDE3ODM3OTA1ND
+ksMjA1Mzk0MTM3OSwtMjEwMDEyNTgzMiwtOTgzOTk4NzkyLC0x
+MTY5MzY2MzU1LC02MTk5OTYyMjQsNjEzMzQ2MDA0XX0=
 -->
