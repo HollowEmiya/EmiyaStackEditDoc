@@ -734,12 +734,12 @@ void GetRMuMuSNuFromScatteringTextureFragCoord(
 		SCATTERING_TEXTURE_MU_S_SIZE,
 		SCATTERING_TEXTURE_MU_SIZE,
 		SCATTERING_TEXTURE_R_SIZE);
-float frag_coord_nu =
-	    floor(frag_coord.x / Number(SCATTERING_TEXTURE_MU_S_SIZE));
-	Number frag_coord_mu_s =
-	    mod(frag_coord.x, Number(SCATTERING_TEXTURE_MU_S_SIZE));
+	float frag_coord_nu =
+	    floor(frag_coord.x / float(SCATTERING_TEXTURE_MU_S_SIZE));
+	float frag_coord_mu_s =
+	    mod(frag_coord.x, float(SCATTERING_TEXTURE_MU_S_SIZE));
 	vec4 uvwz =
-	    vec4(frag_coord_nu, frag_coord_mu_s, frag_coord.y, frag_coord.z) /
+	    float4(frag_coord_nu, frag_coord_mu_s, frag_coord.y, frag_coord.z) /
 	        SCATTERING_TEXTURE_SIZE;
 	GetRMuMuSNuFromScatteringTextureUvwz(
 	    atmosphere, uvwz, r, mu, mu_s, nu, ray_r_mu_intersects_ground);
@@ -768,11 +768,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxND
-Y3MjAwOTEwLC0xNzI4MzQ0NTg5LC05NjYxMzM4OTMsLTE1Mzk0
-MzYxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzODQsOTMxNDAxODU4LC
-0xMzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4NzQ5NDk4LC0zOTk1
-OTUzNTksLTkwOTM5MTYxMSw5MDc2NDY5MzcsLTE2NzUxNTU0NT
-IsLTIyNDYwMTgwNCwxMjMyMTExNDA5LDE4NTI3MjY3MDQsLTcx
-NzAxNTMxNSwyNDYzMjg5NjIsMjQ2MzI4OTYyXX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+IwODE3MDYzMSwtMTcyODM0NDU4OSwtOTY2MTMzODkzLC0xNTM5
+NDM2MTk0LDc1NTMxNzYzMCwxNTc4NjI4Mzg0LDkzMTQwMTg1OC
+wtMTM4NTU3NzYwOCwxMTc1MzE5NTEwLDI5ODc0OTQ5OCwtMzk5
+NTk1MzU5LC05MDkzOTE2MTEsOTA3NjQ2OTM3LC0xNjc1MTU1ND
+UyLC0yMjQ2MDE4MDQsMTIzMjExMTQwOSwxODUyNzI2NzA0LC03
+MTcwMTUzMTUsMjQ2MzI4OTYyLDI0NjMyODk2Ml19
 -->
