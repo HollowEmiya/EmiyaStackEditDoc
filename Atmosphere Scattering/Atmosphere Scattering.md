@@ -752,7 +752,8 @@ void GetRMuMuSNuFromScatteringTextureFragCoord(
 ~~~
 $$
 \begin{aligned}
-\cos(\theta+\alpha
+\cos(\alpha+\theta)=\cos\alpha\cdot\cos\theta-\sin\alpha\cdot\sin\theta
+\cos(\alpha-\theta)=\cos\alpha\cdot\cos\theta+\sin\alpha\cdot\sin\theta
 \end{aligned}
 $$
 ## 参考
@@ -775,11 +776,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-kxNjU2MzM4MiwxMzcxMTU3OTc2LC0xMjA4MTcwNjMxLC0xNzI4
-MzQ0NTg5LC05NjYxMzM4OTMsLTE1Mzk0MzYxOTQsNzU1MzE3Nj
-MwLDE1Nzg2MjgzODQsOTMxNDAxODU4LC0xMzg1NTc3NjA4LDEx
-NzUzMTk1MTAsMjk4NzQ5NDk4LC0zOTk1OTUzNTksLTkwOTM5MT
-YxMSw5MDc2NDY5MzcsLTE2NzUxNTU0NTIsLTIyNDYwMTgwNCwx
-MjMyMTExNDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNV19
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxNT
+Q3MDgwMzE0LDEzNzExNTc5NzYsLTEyMDgxNzA2MzEsLTE3Mjgz
+NDQ1ODksLTk2NjEzMzg5MywtMTUzOTQzNjE5NCw3NTUzMTc2Mz
+AsMTU3ODYyODM4NCw5MzE0MDE4NTgsLTEzODU1Nzc2MDgsMTE3
+NTMxOTUxMCwyOTg3NDk0OTgsLTM5OTU5NTM1OSwtOTA5MzkxNj
+ExLDkwNzY0NjkzNywtMTY3NTE1NTQ1MiwtMjI0NjAxODA0LDEy
+MzIxMTE0MDksMTg1MjcyNjcwNCwtNzE3MDE1MzE1XX0=
 -->
