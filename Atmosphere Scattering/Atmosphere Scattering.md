@@ -781,7 +781,9 @@ float3 GetScattering(AtmosphereParameters atmosphere,
 	AbstractScatteringTexture scattering_texture, float r, float mu, float mu_s, float nu,
 	bool ray_r_mu_intersects_ground)
 {
-	float4 uvwz = GetScatteringTextureUvwzFromRMuMuSNu(
+	float4 uvwz = GetScatteringTextureUvwzFromRMuMuSNu(atmosphere,
+		r, mu, mu_s, nu, ray_r_mu_intersects_ground);
+	float tex_coord_x = uvwz.x * float(SCATTERING_TEXCOORD_NU_SIZE - 1);
 }
 ~~~
 ## 参考
@@ -804,11 +806,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOD
-Y5Mzc1MDMzLC00MzY1MjEyMjAsLTI5MTQzODk0MCwtOTIxOTA5
-MTQ0LDEzNzExNTc5NzYsLTEyMDgxNzA2MzEsLTE3MjgzNDQ1OD
-ksLTk2NjEzMzg5MywtMTUzOTQzNjE5NCw3NTUzMTc2MzAsMTU3
-ODYyODM4NCw5MzE0MDE4NTgsLTEzODU1Nzc2MDgsMTE3NTMxOT
-UxMCwyOTg3NDk0OTgsLTM5OTU5NTM1OSwtOTA5MzkxNjExLDkw
-NzY0NjkzNywtMTY3NTE1NTQ1MiwtMjI0NjAxODA0XX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls4MD
+Q5NzMwNTMsLTQzNjUyMTIyMCwtMjkxNDM4OTQwLC05MjE5MDkx
+NDQsMTM3MTE1Nzk3NiwtMTIwODE3MDYzMSwtMTcyODM0NDU4OS
+wtOTY2MTMzODkzLC0xNTM5NDM2MTk0LDc1NTMxNzYzMCwxNTc4
+NjI4Mzg0LDkzMTQwMTg1OCwtMTM4NTU3NzYwOCwxMTc1MzE5NT
+EwLDI5ODc0OTQ5OCwtMzk5NTk1MzU5LC05MDkzOTE2MTEsOTA3
+NjQ2OTM3LC0xNjc1MTU1NDUyLC0yMjQ2MDE4MDRdfQ==
 -->
