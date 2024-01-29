@@ -714,6 +714,9 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 	float D = DistanceToTopAtmosphereBoundary(
       atmosphere, atmosphere.bottom_radius, atmosphere.mu_s_min);
 	float A = (D - d_min) / (d_max - d_min);
+	float a = (A - x_mu_s * A) / (1.0 + x_mu_s * A);
+	float d = d_min + min(a, A) * (d_max - d_min);
+	float
 }
 ~~~
 ## 参考
@@ -736,11 +739,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-AzMTUwNTA0OSw3NTUzMTc2MzAsMTU3ODYyODM4NCw5MzE0MDE4
-NTgsLTEzODU1Nzc2MDgsMTE3NTMxOTUxMCwyOTg3NDk0OTgsLT
-M5OTU5NTM1OSwtOTA5MzkxNjExLDkwNzY0NjkzNywtMTY3NTE1
-NTQ1MiwtMjI0NjAxODA0LDEyMzIxMTE0MDksMTg1MjcyNjcwNC
-wtNzE3MDE1MzE1LDI0NjMyODk2MiwyNDYzMjg5NjIsMjAzMzI3
-MDc0MCwtMTM1OTE3MDcxOCwtMTQ2ODA3NTE2NF19
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNT
+EzNzM1MjE4LDc1NTMxNzYzMCwxNTc4NjI4Mzg0LDkzMTQwMTg1
+OCwtMTM4NTU3NzYwOCwxMTc1MzE5NTEwLDI5ODc0OTQ5OCwtMz
+k5NTk1MzU5LC05MDkzOTE2MTEsOTA3NjQ2OTM3LC0xNjc1MTU1
+NDUyLC0yMjQ2MDE4MDQsMTIzMjExMTQwOSwxODUyNzI2NzA0LC
+03MTcwMTUzMTUsMjQ2MzI4OTYyLDI0NjMyODk2MiwyMDMzMjcw
+NzQwLC0xMzU5MTcwNzE4LC0xNDY4MDc1MTY0XX0=
 -->
