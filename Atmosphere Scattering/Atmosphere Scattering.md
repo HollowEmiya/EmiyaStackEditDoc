@@ -775,6 +775,7 @@ void ComputeSingleScatteringTexture(AtmosphereParameters atmosphere,
 ~~~
 ### LookUp
 
+
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -795,11 +796,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls2Nz
-UxNDE0ODEsLTI5MTQzODk0MCwtOTIxOTA5MTQ0LDEzNzExNTc5
-NzYsLTEyMDgxNzA2MzEsLTE3MjgzNDQ1ODksLTk2NjEzMzg5My
-wtMTUzOTQzNjE5NCw3NTUzMTc2MzAsMTU3ODYyODM4NCw5MzE0
-MDE4NTgsLTEzODU1Nzc2MDgsMTE3NTMxOTUxMCwyOTg3NDk0OT
-gsLTM5OTU5NTM1OSwtOTA5MzkxNjExLDkwNzY0NjkzNywtMTY3
-NTE1NTQ1MiwtMjI0NjAxODA0LDEyMzIxMTE0MDldfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNj
+EyMDk1NzIxLC0yOTE0Mzg5NDAsLTkyMTkwOTE0NCwxMzcxMTU3
+OTc2LC0xMjA4MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYxMzM4OT
+MsLTE1Mzk0MzYxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzODQsOTMx
+NDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4NzQ5ND
+k4LC0zOTk1OTUzNTksLTkwOTM5MTYxMSw5MDc2NDY5MzcsLTE2
+NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTExNDA5XX0=
 -->
