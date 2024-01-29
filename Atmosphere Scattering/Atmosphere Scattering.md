@@ -194,6 +194,15 @@ struct AtmoSphereParameters
     float bottomRadius;	// planetRaiuds
     float topRadius;	// planetAtmoRadius
     ...
+
+	// The cosine of the maximum Sun zenith angle 
+	// for which atmospheric scattering
+	// must be precomputed 
+	// (for maximum precision, use the smallest Sun zenith
+	// angle yielding negligible sky light radiance values.
+	// For instance, for the Earth case, 
+	// 102 degrees is a good choice - yielding mu_s_min = -0.2).
+	float mu_s_min;
 };
 
 float3 ComputeTransmittanceToTopAtmosphereBoundary(
@@ -655,16 +664,16 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJGUDZ1dU9HcGQ4Wno1NFdtIjp7In
-N0YXJ0IjoyMjk5NSwiZW5kIjoyMzAyMSwidGV4dCI6InJheV9y
+N0YXJ0IjoyMzMzNywiZW5kIjoyMzM2MywidGV4dCI6InJheV9y
 X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-Y3NTE1NTQ1MiwtMjI0NjAxODA0LDEyMzIxMTE0MDksMTg1Mjcy
-NjcwNCwtNzE3MDE1MzE1LDI0NjMyODk2MiwyNDYzMjg5NjIsMj
-AzMzI3MDc0MCwtMTM1OTE3MDcxOCwtMTQ2ODA3NTE2NCwxODUx
-NzUxMjE2LDI1NDM5Njg4NSwtNzg5ODU4MDcyLDE3ODM3OTA1ND
-ksMjA1Mzk0MTM3OSwtMjEwMDEyNTgzMiwtOTgzOTk4NzkyLC0x
-MTY5MzY2MzU1LC02MTk5OTYyMjQsNjEzMzQ2MDA0XX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls3Mj
+U2NDc4NTMsLTE2NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTEx
+NDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5NjIsMj
+Q2MzI4OTYyLDIwMzMyNzA3NDAsLTEzNTkxNzA3MTgsLTE0Njgw
+NzUxNjQsMTg1MTc1MTIxNiwyNTQzOTY4ODUsLTc4OTg1ODA3Mi
+wxNzgzNzkwNTQ5LDIwNTM5NDEzNzksLTIxMDAxMjU4MzIsLTk4
+Mzk5ODc5MiwtMTE2OTM2NjM1NSwtNjE5OTk2MjI0XX0=
 -->
