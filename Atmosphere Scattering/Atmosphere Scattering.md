@@ -705,7 +705,7 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 		float d = d_min + (d_max - d_min) * GetUnitRangeFromTextureCoord(
 			2.0*uvwz.z-1.0,SCATTERING_TEXTURE_MU_SIZE/2);
 		mu = d == 0.0 ? 1.0 : 
-			clamp( (H*H - rho*rho - d*d)/(2.0*r*d) ); 
+			clamp( (H*H - rho*rho - d*d)/(2.0*r*d), -1.0,1.0 ); 
 	    ray_r_mu_intersects_ground = false;
 	}
 	float x_mu_s = GetUnitRangeFromTextureCoord(uvwz.y,SCATTERING_TEXTURE_MU_S_SIZE);
@@ -716,7 +716,9 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 	float A = (D - d_min) / (d_max - d_min);
 	float a = (A - x_mu_s * A) / (1.0 + x_mu_s * A);
 	float d = d_min + min(a, A) * (d_max - d_min);
-	float
+	mu_s = d == 0.0 ? 1.0 :
+		clamp((H * H - d * d) / (2.0 * atmosphere.bottom_radius * d), -1.0, 1.0);
+	nu = ClampCosine(uvwz.x * 2.0 - 1.0);
 }
 ~~~
 ## 参考
@@ -739,8 +741,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNT
-EzNzM1MjE4LDc1NTMxNzYzMCwxNTc4NjI4Mzg0LDkzMTQwMTg1
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOT
+U5NjEzMzE0LDc1NTMxNzYzMCwxNTc4NjI4Mzg0LDkzMTQwMTg1
 OCwtMTM4NTU3NzYwOCwxMTc1MzE5NTEwLDI5ODc0OTQ5OCwtMz
 k5NTk1MzU5LC05MDkzOTE2MTEsOTA3NjQ2OTM3LC0xNjc1MTU1
 NDUyLC0yMjQ2MDE4MDQsMTIzMjExMTQwOSwxODUyNzI2NzA0LC
