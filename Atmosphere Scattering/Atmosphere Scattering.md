@@ -696,7 +696,11 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 			clamp(-(rho*rho+d*d)/(2.0*r*d),-1.0,1.0);  
 	    ray_r_mu_intersects_ground = true;
 	}
-	e
+	else
+	{
+		// 射线到大气层的距离，其最大最小值覆盖所有射线和大气层相交的
+		// mu,从 (r,1
+	}
 }
 ~~~
 ## 参考
@@ -719,8 +723,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxND
-EzMzM4Mjg1LDE1Nzg2MjgzODQsOTMxNDAxODU4LC0xMzg1NTc3
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsyMD
+gwNDU5NjU3LDE1Nzg2MjgzODQsOTMxNDAxODU4LC0xMzg1NTc3
 NjA4LDExNzUzMTk1MTAsMjk4NzQ5NDk4LC0zOTk1OTUzNTksLT
 kwOTM5MTYxMSw5MDc2NDY5MzcsLTE2NzUxNTU0NTIsLTIyNDYw
 MTgwNCwxMjMyMTExNDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNS
