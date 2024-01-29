@@ -737,7 +737,7 @@ void GetRMuMuSNuFromScatteringTextureFragCoord(
 	// 小于等于 的 最大整数值
 	float frag_coord_nu =
 	    floor(frag_coord.x / float(SCATTERING_TEXTURE_MU_S_SIZE));
-    // 对 x 取Mu余数
+    // 对 x 取Mu_S余数
 	float frag_coord_mu_s =
 	    mod(frag_coord.x, float(SCATTERING_TEXTURE_MU_S_SIZE));
 	vec4 uvwz =
@@ -770,8 +770,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMD
-ExMzgxMDA0LC0xMjA4MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYx
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOD
+A4ODYwMDY0LC0xMjA4MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYx
 MzM4OTMsLTE1Mzk0MzYxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzOD
 QsOTMxNDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4
 NzQ5NDk4LC0zOTk1OTUzNTksLTkwOTM5MTYxMSw5MDc2NDY5Mz
