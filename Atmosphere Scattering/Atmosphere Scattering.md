@@ -725,26 +725,27 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 按照上述代码，我们需要一个 4D 纹理，但是实际上这不现实……因此我们要再做一次映射，在 3D 和 4D 之间。下述函数解释了如何从 3D 到 4D 纹理坐标$(r,\mu,\mu_s,\nu)$。这是通过 “unpacking” 把 x 分成两个纹理坐标来实现的。请注意在最后如何对 ν 参数进行了夹断。这是因为 ν 不是一个完全独立的变量：其取值范围取决于 μ 和 μs（通过从天顶、视角和太阳单位方向向量的笛卡尔坐标计算这一点是可以看出的），并且前面的函数暗示了这一点（如果不遵守这一约束，它们的断言可能会失败）。
 ~~~C++
 void GetRMuMuSNuFromScatteringTextureFragCoord(
-	AtmosphereParameters atmosphere, flot3 frag_coord,
+	AtmosphereParameters atmosphere, float3 frag_coord,
     out float r, out float mu, out float mu_s, out float nu,
-    out bool ray_r_mu_intersects_ground) {
-  const vec4 SCATTERING_TEXTURE_SIZE = vec4(
-      SCATTERING_TEXTURE_NU_SIZE - 1,
-      SCATTERING_TEXTURE_MU_S_SIZE,
-      SCATTERING_TEXTURE_MU_SIZE,
-      SCATTERING_TEXTURE_R_SIZE);
-  Number frag_coord_nu =
-      floor(frag_coord.x / Number(SCATTERING_TEXTURE_MU_S_SIZE));
-  Number frag_coord_mu_s =
-      mod(frag_coord.x, Number(SCATTERING_TEXTURE_MU_S_SIZE));
-  vec4 uvwz =
-      vec4(frag_coord_nu, frag_coord_mu_s, frag_coord.y, frag_coord.z) /
-          SCATTERING_TEXTURE_SIZE;
-  GetRMuMuSNuFromScatteringTextureUvwz(
-      atmosphere, uvwz, r, mu, mu_s, nu, ray_r_mu_intersects_ground);
-  // Clamp nu to its valid range of values, given mu and mu_s.
-  nu = clamp(nu, mu * mu_s - sqrt((1.0 - mu * mu) * (1.0 - mu_s * mu_s)),
-      mu * mu_s + sqrt((1.0 - mu * mu) * (1.0 - mu_s * mu_s)));
+    out bool ray_r_mu_intersects_ground)
+{
+	const float4 SCATTERING_TEXTURE_SIZE = float4(
+		SCATTERING_TEXTURE_NU_SIZE - 1,
+		SCATTERING_TEXTURE_MU_S_SIZE,
+		SCATTERING_TEXTURE_MU_SIZE,
+		SCATTERING_TEXTURE_R_SIZE);
+float frag_coord_nu =
+	    floor(frag_coord.x / Number(SCATTERING_TEXTURE_MU_S_SIZE));
+	Number frag_coord_mu_s =
+	    mod(frag_coord.x, Number(SCATTERING_TEXTURE_MU_S_SIZE));
+	vec4 uvwz =
+	    vec4(frag_coord_nu, frag_coord_mu_s, frag_coord.y, frag_coord.z) /
+	        SCATTERING_TEXTURE_SIZE;
+	GetRMuMuSNuFromScatteringTextureUvwz(
+	    atmosphere, uvwz, r, mu, mu_s, nu, ray_r_mu_intersects_ground);
+	// Clamp nu to its valid range of values, given mu and mu_s.
+	nu = clamp(nu, mu * mu_s - sqrt((1.0 - mu * mu) * (1.0 - mu_s * mu_s)),
+	    mu * mu_s + sqrt((1.0 - mu * mu) * (1.0 - mu_s * mu_s)));
 }
 ~~~
 ## 参考
@@ -767,11 +768,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOT
-EyMTY1ODAsLTE3MjgzNDQ1ODksLTk2NjEzMzg5MywtMTUzOTQz
-NjE5NCw3NTUzMTc2MzAsMTU3ODYyODM4NCw5MzE0MDE4NTgsLT
-EzODU1Nzc2MDgsMTE3NTMxOTUxMCwyOTg3NDk0OTgsLTM5OTU5
-NTM1OSwtOTA5MzkxNjExLDkwNzY0NjkzNywtMTY3NTE1NTQ1Mi
-wtMjI0NjAxODA0LDEyMzIxMTE0MDksMTg1MjcyNjcwNCwtNzE3
-MDE1MzE1LDI0NjMyODk2MiwyNDYzMjg5NjJdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxND
+Y3MjAwOTEwLC0xNzI4MzQ0NTg5LC05NjYxMzM4OTMsLTE1Mzk0
+MzYxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzODQsOTMxNDAxODU4LC
+0xMzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4NzQ5NDk4LC0zOTk1
+OTUzNTksLTkwOTM5MTYxMSw5MDc2NDY5MzcsLTE2NzUxNTU0NT
+IsLTIyNDYwMTgwNCwxMjMyMTExNDA5LDE4NTI3MjY3MDQsLTcx
+NzAxNTMxNSwyNDYzMjg5NjIsMjQ2MzI4OTYyXX0=
 -->
