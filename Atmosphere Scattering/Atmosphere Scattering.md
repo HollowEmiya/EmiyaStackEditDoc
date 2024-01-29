@@ -674,7 +674,8 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 	out bool ray_r_mu_intersects_ground)
 {
 	float H = sqrt(atmosphere.top_radius * atmosphere.top_radius -
-      atmosphere.bottom_radius * atmosphere.bottom_radius);
+		atmosphere.bottom_radius * atmosphere.bottom_radius);
+	
 }
 ~~~
 ## 参考
@@ -697,11 +698,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-Q0MTc0MDI2LDkzMTQwMTg1OCwtMTM4NTU3NzYwOCwxMTc1MzE5
-NTEwLDI5ODc0OTQ5OCwtMzk5NTk1MzU5LC05MDkzOTE2MTEsOT
-A3NjQ2OTM3LC0xNjc1MTU1NDUyLC0yMjQ2MDE4MDQsMTIzMjEx
-MTQwOSwxODUyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4OTYyLD
-I0NjMyODk2MiwyMDMzMjcwNzQwLC0xMzU5MTcwNzE4LC0xNDY4
-MDc1MTY0LDE4NTE3NTEyMTYsMjU0Mzk2ODg1XX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNz
+k4MDgxMzIsOTMxNDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1
+MTAsMjk4NzQ5NDk4LC0zOTk1OTUzNTksLTkwOTM5MTYxMSw5MD
+c2NDY5MzcsLTE2NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTEx
+NDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5NjIsMj
+Q2MzI4OTYyLDIwMzMyNzA3NDAsLTEzNTkxNzA3MTgsLTE0Njgw
+NzUxNjQsMTg1MTc1MTIxNiwyNTQzOTY4ODVdfQ==
 -->
