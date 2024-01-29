@@ -786,7 +786,8 @@ float3 GetScattering(AtmosphereParameters atmosphere,
 	float tex_coord_x = uvwz.x * float(SCATTERING_TEXCOORD_NU_SIZE - 1);
 	float tex_x = floor(tex_coord_x);
 	float lerp = tex_coord_x - tex_x;
-	float3 uvw0 = float3(
+	float3 uvw0 = float3( (tex_x + uvwz.y) / float(SCATTERING_TEXTURE_NU_SIZE), 
+		uvwz.z, uvwz.w);
 }
 ~~~
 ## 参考
@@ -809,8 +810,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOD
-g2NzgxMjgzLDgwNDk3MzA1MywtNDM2NTIxMjIwLC0yOTE0Mzg5
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMT
+M0MjIwMjI1LDgwNDk3MzA1MywtNDM2NTIxMjIwLC0yOTE0Mzg5
 NDAsLTkyMTkwOTE0NCwxMzcxMTU3OTc2LC0xMjA4MTcwNjMxLC
 0xNzI4MzQ0NTg5LC05NjYxMzM4OTMsLTE1Mzk0MzYxOTQsNzU1
 MzE3NjMwLDE1Nzg2MjgzODQsOTMxNDAxODU4LC0xMzg1NTc3Nj
