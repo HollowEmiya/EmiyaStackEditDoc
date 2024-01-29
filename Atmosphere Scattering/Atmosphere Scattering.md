@@ -650,7 +650,10 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	float D = DistanceToTopAtmosphereBoundary(
 		atmosphere, atmosphere.bottom_radius, atmosphere.mu_s_min);
 	float A = (D-d_min)/(d_max-d_min);
-	// 这是一种临时的函数，对于太阳天顶角 mu_s=mu_s_minμs​=mu_s_min 时等于 0（因为此时 d=�d=D 且 �=�a=A），对于 mu_s=1μs​=1 时等于 1（因为此时 �=�_���d=d_min 且 �=0a=0），并在 ��=0μs​=0 附近具有较大的斜率，以获取地平线附近更多的纹理样本。
+	// 这是一种临时的函数，对于太阳天顶角 mu_s=mu_s_min 时等于 0
+	// (因为此时 d=D 且 a=A)，对于 mu_s=1 时等于 1
+	// (因为此时 d=d_min 且 a=0)，
+	// 并在 mu_s​=0 附近具有较大的斜率，以获取地平线附近更多的纹理样本。
 }
 ~~~
 [uvwz - GeoGebra](https://www.geogebra.org/geometry/hvfwsrc7)
@@ -674,8 +677,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxNz
-A0ODQ1NjY1LDkwNzY0NjkzNywtMTY3NTE1NTQ1MiwtMjI0NjAx
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOT
+A5MzkxNjExLDkwNzY0NjkzNywtMTY3NTE1NTQ1MiwtMjI0NjAx
 ODA0LDEyMzIxMTE0MDksMTg1MjcyNjcwNCwtNzE3MDE1MzE1LD
 I0NjMyODk2MiwyNDYzMjg5NjIsMjAzMzI3MDc0MCwtMTM1OTE3
 MDcxOCwtMTQ2ODA3NTE2NCwxODUxNzUxMjE2LDI1NDM5Njg4NS
