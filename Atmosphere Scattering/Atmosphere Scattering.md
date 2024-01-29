@@ -721,7 +721,7 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 	nu = clamp(uvwz.x * 2.0 - 1.0, -1.0, 1.0);
 }
 ~~~
-按照上述代码，我们需要一个 4D 纹理，但是实际上这不现实
+按照上述代码，我们需要一个 4D 纹理，但是实际上这不现实……因此我们要再做一次映射，在 3D 和 4D 之间。下述函数解释了如何从 3D 到 4D z
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -742,11 +742,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMj
-MyODIzNDkzLC0xNTM5NDM2MTk0LDc1NTMxNzYzMCwxNTc4NjI4
-Mzg0LDkzMTQwMTg1OCwtMTM4NTU3NzYwOCwxMTc1MzE5NTEwLD
-I5ODc0OTQ5OCwtMzk5NTk1MzU5LC05MDkzOTE2MTEsOTA3NjQ2
-OTM3LC0xNjc1MTU1NDUyLC0yMjQ2MDE4MDQsMTIzMjExMTQwOS
-wxODUyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4OTYyLDI0NjMy
-ODk2MiwyMDMzMjcwNzQwLC0xMzU5MTcwNzE4XX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls2Mz
+U2ODUzMjgsLTE1Mzk0MzYxOTQsNzU1MzE3NjMwLDE1Nzg2Mjgz
+ODQsOTMxNDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1MTAsMj
+k4NzQ5NDk4LC0zOTk1OTUzNTksLTkwOTM5MTYxMSw5MDc2NDY5
+MzcsLTE2NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTExNDA5LD
+E4NTI3MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5NjIsMjQ2MzI4
+OTYyLDIwMzMyNzA3NDAsLTEzNTkxNzA3MThdfQ==
 -->
