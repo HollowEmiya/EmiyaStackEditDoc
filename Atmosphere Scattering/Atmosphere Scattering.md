@@ -750,6 +750,11 @@ void GetRMuMuSNuFromScatteringTextureFragCoord(
 	    mu * mu_s + sqrt((1.0 - mu * mu) * (1.0 - mu_s * mu_s)));
 }
 ~~~
+$$
+\begin{aligned}
+\cos(\theta+\alpha
+\end{aligned}
+$$
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -770,11 +775,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMz
-cxMTU3OTc2LC0xMjA4MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYx
-MzM4OTMsLTE1Mzk0MzYxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzOD
-QsOTMxNDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4
-NzQ5NDk4LC0zOTk1OTUzNTksLTkwOTM5MTYxMSw5MDc2NDY5Mz
-csLTE2NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTExNDA5LDE4
-NTI3MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5NjJdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+kxNjU2MzM4MiwxMzcxMTU3OTc2LC0xMjA4MTcwNjMxLC0xNzI4
+MzQ0NTg5LC05NjYxMzM4OTMsLTE1Mzk0MzYxOTQsNzU1MzE3Nj
+MwLDE1Nzg2MjgzODQsOTMxNDAxODU4LC0xMzg1NTc3NjA4LDEx
+NzUzMTk1MTAsMjk4NzQ5NDk4LC0zOTk1OTUzNTksLTkwOTM5MT
+YxMSw5MDc2NDY5MzcsLTE2NzUxNTU0NTIsLTIyNDYwMTgwNCwx
+MjMyMTExNDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNV19
 -->
