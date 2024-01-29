@@ -652,8 +652,8 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 		atmosphere.mu_s_min);
 	float A = (D-d_min)/(d_max-d_min);
 	// 这是一种临时的函数，对于太阳天顶角 mu_s=mu_s_min 时等于 0
-	// (因为此时 d=D 且 a=A)，对于 mu_s=1 时等于 1
-	// (因为此时 d=d_min 且 a=0)，
+	// (因为此时 d=D 且 a=A)，
+	// 对于 mu_s=1 时等于 1,(因为此时 d=d_min 且 a=0)，
 	// 并在 mu_s​=0 附近具有较大的斜率，以获取地平线附近更多的纹理样本。
 	float u_mu_s = GetTextureCoordFromUnitRange(
 		max(1.0 - a/A, 0.0) / (1.0 + a),
@@ -683,11 +683,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsyOT
-g3NDk0OTgsLTM5OTU5NTM1OSwtOTA5MzkxNjExLDkwNzY0Njkz
-NywtMTY3NTE1NTQ1MiwtMjI0NjAxODA0LDEyMzIxMTE0MDksMT
-g1MjcyNjcwNCwtNzE3MDE1MzE1LDI0NjMyODk2MiwyNDYzMjg5
-NjIsMjAzMzI3MDc0MCwtMTM1OTE3MDcxOCwtMTQ2ODA3NTE2NC
-wxODUxNzUxMjE2LDI1NDM5Njg4NSwtNzg5ODU4MDcyLDE3ODM3
-OTA1NDksMjA1Mzk0MTM3OSwtMjEwMDEyNTgzMl19
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMT
+c1MzE5NTEwLDI5ODc0OTQ5OCwtMzk5NTk1MzU5LC05MDkzOTE2
+MTEsOTA3NjQ2OTM3LC0xNjc1MTU1NDUyLC0yMjQ2MDE4MDQsMT
+IzMjExMTQwOSwxODUyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4
+OTYyLDI0NjMyODk2MiwyMDMzMjcwNzQwLC0xMzU5MTcwNzE4LC
+0xNDY4MDc1MTY0LDE4NTE3NTEyMTYsMjU0Mzk2ODg1LC03ODk4
+NTgwNzIsMTc4Mzc5MDU0OSwyMDUzOTQxMzc5XX0=
 -->
