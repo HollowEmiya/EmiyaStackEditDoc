@@ -245,7 +245,7 @@ float GetTextureCoordFromUnitRange(float x, int tex_size)
     return 0.5/ tex_size + x * (1.0 - 1.0/tex_size);
 }
 
-float GetUintRangeFromTexCoord(float u, int tex_size)
+float GetUnitRangeFromTexCoord(float u, int tex_size)
 {
     return (u - 0.5 / tex_size) / (1.0 - 1.0 / tex_size);
 }
@@ -714,8 +714,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls4NT
-Y5MDI4NzQsOTMxNDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNT
+YyNTU4NjgsOTMxNDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1
 MTAsMjk4NzQ5NDk4LC0zOTk1OTUzNTksLTkwOTM5MTYxMSw5MD
 c2NDY5MzcsLTE2NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTEx
 NDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5NjIsMj
