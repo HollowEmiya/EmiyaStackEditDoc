@@ -665,6 +665,11 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 [uvwz - GeoGebra](https://www.geogebra.org/geometry/hvfwsrc7)
 [Atmo_mu_s | Desmos](https://www.desmos.com/calculator/yyplzlmfvv?lang=zh-CN)
 在 $\mu_s=0$ 处斜率小，$\mu_s$ 会对应更多的 UV 值。
+
+逆变换如下：
+~~~C++
+
+~~~
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -685,8 +690,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstND
-A3NzU1MTk0LDkzMTQwMTg1OCwtMTM4NTU3NzYwOCwxMTc1MzE5
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsyMT
+A1MDIwNjUwLDkzMTQwMTg1OCwtMTM4NTU3NzYwOCwxMTc1MzE5
 NTEwLDI5ODc0OTQ5OCwtMzk5NTk1MzU5LC05MDkzOTE2MTEsOT
 A3NjQ2OTM3LC0xNjc1MTU1NDUyLC0yMjQ2MDE4MDQsMTIzMjEx
 MTQwOSwxODUyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4OTYyLD
