@@ -774,8 +774,8 @@ void ComputeSingleScatteringTexture(AtmosphereParameters atmosphere,
 }
 ~~~
 ### LookUp
-
-
+通过上述预计算的纹理的帮助，我们现在可以通过两次纹理查找获取点与最近的大气边界之间的散射效果（我们需要两个3D纹理查找来模拟单个4D纹理查找，并进行四线性插值；3D纹理坐标是使用在 `GetRMuMuSNuFromScatteringTextureFragCoord` 中定义的 3D-4D 映射的逆过程计算的）。
+( 还有一点，因为我们前面所做的纹理映射可以保证在不同 $\nu$ 的纹理之间不会cun'zai
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -796,11 +796,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNj
-EyMDk1NzIxLC0yOTE0Mzg5NDAsLTkyMTkwOTE0NCwxMzcxMTU3
-OTc2LC0xMjA4MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYxMzM4OT
-MsLTE1Mzk0MzYxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzODQsOTMx
-NDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4NzQ5ND
-k4LC0zOTk1OTUzNTksLTkwOTM5MTYxMSw5MDc2NDY5MzcsLTE2
-NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTExNDA5XX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsyOT
+E2MDM3OTksLTI5MTQzODk0MCwtOTIxOTA5MTQ0LDEzNzExNTc5
+NzYsLTEyMDgxNzA2MzEsLTE3MjgzNDQ1ODksLTk2NjEzMzg5My
+wtMTUzOTQzNjE5NCw3NTUzMTc2MzAsMTU3ODYyODM4NCw5MzE0
+MDE4NTgsLTEzODU1Nzc2MDgsMTE3NTMxOTUxMCwyOTg3NDk0OT
+gsLTM5OTU5NTM1OSwtOTA5MzkxNjExLDkwNzY0NjkzNywtMTY3
+NTE1NTQ1MiwtMjI0NjAxODA0LDEyMzIxMTE0MDldfQ==
 -->
