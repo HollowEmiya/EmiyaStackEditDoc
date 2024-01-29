@@ -642,7 +642,7 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 			(d-min)/(d_max-d_min), 
 			SCATTERING_TEXTURE_MU_SIZE / 2);
 	}
-	float d = DistancneToTopAtmosphereBoundary(
+	float d = DistanceToTopAtmosphereBoundary(
 		atmosphere, atmosphere.bottom_radius, mu_s);
 	float d_min = atmosphere.top_radius - atmosphere.bottom_radius;
 	float d_max = H;
@@ -684,8 +684,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOD
-EwMzExMTI0LC0xMzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4NzQ5
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxND
+k1MDMzOTIyLC0xMzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4NzQ5
 NDk4LC0zOTk1OTUzNTksLTkwOTM5MTYxMSw5MDc2NDY5MzcsLT
 E2NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTExNDA5LDE4NTI3
 MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5NjIsMjQ2MzI4OTYyLD
