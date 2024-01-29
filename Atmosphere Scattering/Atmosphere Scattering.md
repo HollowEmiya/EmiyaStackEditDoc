@@ -629,7 +629,9 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	}
 	float d = DistacneToTopAtmosphereBoundary(
 		atmosphere, atmosphere.bottom_radius, mu_s);
-	float d_min = atmosphere.top_r
+	float d_min = atmosphere.top_radius - atmosphere.bottom_radius;
+	float d_max = H;
+	float a = (d-d_min)/(d_max-d
 }
 ~~~
 [uvwz - GeoGebra](https://www.geogebra.org/geometry/hvfwsrc7)
@@ -654,7 +656,7 @@ JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
 cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMj
-AwMjIzMDYwNCwxODUyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4
+A5Njg3MTA5MSwxODUyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4
 OTYyLDI0NjMyODk2MiwyMDMzMjcwNzQwLC0xMzU5MTcwNzE4LC
 0xNDY4MDc1MTY0LDE4NTE3NTEyMTYsMjU0Mzk2ODg1LC03ODk4
 NTgwNzIsMTc4Mzc5MDU0OSwyMDUzOTQxMzc5LC0yMTAwMTI1OD
