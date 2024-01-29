@@ -683,8 +683,9 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 		atmosphere.bottom_radius * atmosphere.bottom_radius);
 
 	if(uvwz.z < 0.5)
-	{//
-		
+	{
+		// Ray Cross Ground
+		// 
 	}
 }
 ~~~
@@ -708,8 +709,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls0MT
-M1ODQzNzQsOTMxNDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsyMj
+Y0NzM5NzUsOTMxNDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1
 MTAsMjk4NzQ5NDk4LC0zOTk1OTUzNTksLTkwOTM5MTYxMSw5MD
 c2NDY5MzcsLTE2NzUxNTU0NTIsLTIyNDYwMTgwNCwxMjMyMTEx
 NDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNSwyNDYzMjg5NjIsMj
