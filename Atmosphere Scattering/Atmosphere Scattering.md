@@ -703,7 +703,7 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 		float d_min = atmosphere.top_radius - r;
 		float d_max = rho + H;
 		float d = d_min + (d_max - d_min) * GetUnitRangeFromTextureCoord(
-			
+			2.0*uvwz.z-1.0,SCATTERING_TEXTURE_MU_SIZE/2);
 	}
 }
 ~~~
@@ -727,8 +727,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNT
-k3MzMxMzc1LDE1Nzg2MjgzODQsOTMxNDAxODU4LC0xMzg1NTc3
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxNz
+A3Mjg1MjE5LDE1Nzg2MjgzODQsOTMxNDAxODU4LC0xMzg1NTc3
 NjA4LDExNzUzMTk1MTAsMjk4NzQ5NDk4LC0zOTk1OTUzNTksLT
 kwOTM5MTYxMSw5MDc2NDY5MzcsLTE2NzUxNTU0NTIsLTIyNDYw
 MTgwNCwxMjMyMTExNDA5LDE4NTI3MjY3MDQsLTcxNzAxNTMxNS
