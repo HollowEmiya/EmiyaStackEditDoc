@@ -721,7 +721,7 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 	nu = clamp(uvwz.x * 2.0 - 1.0, -1.0, 1.0);
 }
 ~~~
-按照上述代码，我们需要一个 4D 纹理，但是实际上这不现实……因此我们要再做一次映射，在 3D 和 4D 之间。下述函数解释了如何从 3D 到 4D 纹理坐标$(r,\mu,\mu_s,\nu)$。这是通过 “unpacking” 把 x 
+按照上述代码，我们需要一个 4D 纹理，但是实际上这不现实……因此我们要再做一次映射，在 3D 和 4D 之间。下述函数解释了如何从 3D 到 4D 纹理坐标$(r,\mu,\mu_s,\nu)$。这是通过 “unpacking” 把 x 分成两个纹理坐标来实现的。请注意在最后如何对 ν 参数进行了夹断。这是因为 ν 不是一个完全独立的变量：其取值范围取决于 μ 和 μs（通过从天顶、视角和太阳单位方向向量的笛卡尔坐标计算这一点是可以看出的），并且前面的函数暗示了这一点（如果不遵守这一约束，它们的断言可能会失败）。
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -742,11 +742,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-QxNDgyNzY3NiwtMTUzOTQzNjE5NCw3NTUzMTc2MzAsMTU3ODYy
-ODM4NCw5MzE0MDE4NTgsLTEzODU1Nzc2MDgsMTE3NTMxOTUxMC
-wyOTg3NDk0OTgsLTM5OTU5NTM1OSwtOTA5MzkxNjExLDkwNzY0
-NjkzNywtMTY3NTE1NTQ1MiwtMjI0NjAxODA0LDEyMzIxMTE0MD
-ksMTg1MjcyNjcwNCwtNzE3MDE1MzE1LDI0NjMyODk2MiwyNDYz
-Mjg5NjIsMjAzMzI3MDc0MCwtMTM1OTE3MDcxOF19
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOT
+Y2MTMzODkzLC0xNTM5NDM2MTk0LDc1NTMxNzYzMCwxNTc4NjI4
+Mzg0LDkzMTQwMTg1OCwtMTM4NTU3NzYwOCwxMTc1MzE5NTEwLD
+I5ODc0OTQ5OCwtMzk5NTk1MzU5LC05MDkzOTE2MTEsOTA3NjQ2
+OTM3LC0xNjc1MTU1NDUyLC0yMjQ2MDE4MDQsMTIzMjExMTQwOS
+wxODUyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4OTYyLDI0NjMy
+ODk2MiwyMDMzMjcwNzQwLC0xMzU5MTcwNzE4XX0=
 -->
