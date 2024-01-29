@@ -623,7 +623,8 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 		float d_min = atmosphere.top_radius - r;
 		float d_max = rho + H;
 		u_mu = 0.5 + 0.5 * GetTextureCoordFromRange(
-			(d-min)/(d_max-d_min), SCAT
+			(d-min)/(d_max-d_min), 
+			SCATTERING_TEXTURE_MU_SIZE / 2);
 	}
 }
 ~~~
@@ -648,8 +649,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsyMD
-c4NjI5NjUxLC03MTcwMTUzMTUsMjQ2MzI4OTYyLDI0NjMyODk2
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOD
+UyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4OTYyLDI0NjMyODk2
 MiwyMDMzMjcwNzQwLC0xMzU5MTcwNzE4LC0xNDY4MDc1MTY0LD
 E4NTE3NTEyMTYsMjU0Mzk2ODg1LC03ODk4NTgwNzIsMTc4Mzc5
 MDU0OSwyMDUzOTQxMzc5LC0yMTAwMTI1ODMyLC05ODM5OTg3OT
