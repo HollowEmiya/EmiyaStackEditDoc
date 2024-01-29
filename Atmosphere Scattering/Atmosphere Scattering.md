@@ -762,7 +762,15 @@ void ComputeSingleScatteringTexture(AtmosphereParameters atmosphere,
 	TransmittanceTexture transmittance_texture, float3 frag_coord,
 	out float3 rayleigh, out float3 mie)
 {
-	float r
+	float r;
+	float mu;
+	float mu_s;
+	float nu;
+	bool ray_r_mu_intersects_ground;
+	GetRMuMuSNuFromScatteringTextureFragCoord(atmosphere, frag_coord,
+      r, mu, mu_s, nu, ray_r_mu_intersects_ground);
+	ComputeSingleScattering(atmosphere, transmittance_texture,
+      r, mu, mu_s, nu, ray_r_mu_intersects_ground, rayleigh, mie);
 }
 ~~~
 ## 参考
@@ -785,11 +793,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls5Nz
-g2MDAyNzcsLTkyMTkwOTE0NCwxMzcxMTU3OTc2LC0xMjA4MTcw
-NjMxLC0xNzI4MzQ0NTg5LC05NjYxMzM4OTMsLTE1Mzk0MzYxOT
-QsNzU1MzE3NjMwLDE1Nzg2MjgzODQsOTMxNDAxODU4LC0xMzg1
-NTc3NjA4LDExNzUzMTk1MTAsMjk4NzQ5NDk4LC0zOTk1OTUzNT
-ksLTkwOTM5MTYxMSw5MDc2NDY5MzcsLTE2NzUxNTU0NTIsLTIy
-NDYwMTgwNCwxMjMyMTExNDA5LDE4NTI3MjY3MDRdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMj
+kxNDM4OTQwLC05MjE5MDkxNDQsMTM3MTE1Nzk3NiwtMTIwODE3
+MDYzMSwtMTcyODM0NDU4OSwtOTY2MTMzODkzLC0xNTM5NDM2MT
+k0LDc1NTMxNzYzMCwxNTc4NjI4Mzg0LDkzMTQwMTg1OCwtMTM4
+NTU3NzYwOCwxMTc1MzE5NTEwLDI5ODc0OTQ5OCwtMzk5NTk1Mz
+U5LC05MDkzOTE2MTEsOTA3NjQ2OTM3LC0xNjc1MTU1NDUyLC0y
+MjQ2MDE4MDQsMTIzMjExMTQwOSwxODUyNzI2NzA0XX0=
 -->
