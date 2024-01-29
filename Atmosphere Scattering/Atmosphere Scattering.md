@@ -788,6 +788,10 @@ float3 GetScattering(AtmosphereParameters atmosphere,
 	float lerp = tex_coord_x - tex_x;
 	float3 uvw0 = float3( (tex_x + uvwz.y) / float(SCATTERING_TEXTURE_NU_SIZE), 
 		uvwz.z, uvwz.w);
+	float3 uvw1 = float3( (tex_x + 1.0 + uvwz.y) / float(SCATTERING_TEXTURE_NU_SIZE), 
+		uvwz.z, uvwz.w);
+	return float3(texture(scattering_texture, uvw0) * (1.0 - lerp) +
+		texture(scattering_texture, uvw1) * lerp);
 }
 ~~~
 ## 参考
@@ -810,11 +814,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMT
-M0MjIwMjI1LDgwNDk3MzA1MywtNDM2NTIxMjIwLC0yOTE0Mzg5
-NDAsLTkyMTkwOTE0NCwxMzcxMTU3OTc2LC0xMjA4MTcwNjMxLC
-0xNzI4MzQ0NTg5LC05NjYxMzM4OTMsLTE1Mzk0MzYxOTQsNzU1
-MzE3NjMwLDE1Nzg2MjgzODQsOTMxNDAxODU4LC0xMzg1NTc3Nj
-A4LDExNzUzMTk1MTAsMjk4NzQ5NDk4LC0zOTk1OTUzNTksLTkw
-OTM5MTYxMSw5MDc2NDY5MzcsLTE2NzUxNTU0NTJdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls1OT
+UzMDY5ODMsODA0OTczMDUzLC00MzY1MjEyMjAsLTI5MTQzODk0
+MCwtOTIxOTA5MTQ0LDEzNzExNTc5NzYsLTEyMDgxNzA2MzEsLT
+E3MjgzNDQ1ODksLTk2NjEzMzg5MywtMTUzOTQzNjE5NCw3NTUz
+MTc2MzAsMTU3ODYyODM4NCw5MzE0MDE4NTgsLTEzODU1Nzc2MD
+gsMTE3NTMxOTUxMCwyOTg3NDk0OTgsLTM5OTU5NTM1OSwtOTA5
+MzkxNjExLDkwNzY0NjkzNywtMTY3NTE1NTQ1Ml19
 -->
