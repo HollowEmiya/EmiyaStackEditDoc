@@ -616,7 +616,7 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	}
 	else
 	{
-		// 
+		// 射线到大气层交点的距离，其最大最小值覆盖(不与地面相交)
 		//
 		//
 		float d = - r_mu + max(0.0f,sqrt(discriminant + H*H));
@@ -644,8 +644,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNT
-MwNzE5MDEyLDI0NjMyODk2MiwyNDYzMjg5NjIsMjAzMzI3MDc0
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMz
+gwODU5NzcxLDI0NjMyODk2MiwyNDYzMjg5NjIsMjAzMzI3MDc0
 MCwtMTM1OTE3MDcxOCwtMTQ2ODA3NTE2NCwxODUxNzUxMjE2LD
 I1NDM5Njg4NSwtNzg5ODU4MDcyLDE3ODM3OTA1NDksMjA1Mzk0
 MTM3OSwtMjEwMDEyNTgzMiwtOTgzOTk4NzkyLC0xMTY5MzY2Mz
