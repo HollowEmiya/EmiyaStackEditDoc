@@ -610,6 +610,7 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 		float d = -r_mu - max(0.0f,sqrt(discriminant);
 		float d_min = r - atmosphere.bottom_radius;
 		float d_max = rho;
+		// d_max == d_min 是 p 点在地面上
 		u_mu = 0.5 - 0.5 * GetTextureCoordFromUnitRange(
 			d_max == d_min ? 0.0 : (d - d_min)/(d_max - d_min),
 			SCATTERING_TEXTURE_MU_SIZE / 2);
@@ -626,6 +627,7 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 			(d-min)/(d_max-d_min), 
 			SCATTERING_TEXTURE_MU_SIZE / 2);
 	}
+	float d = DistacneToTopAtmosphereBou
 }
 ~~~
 [uvwz - GeoGebra](https://www.geogebra.org/geometry/hvfwsrc7)
@@ -649,11 +651,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOD
-UyNzI2NzA0LC03MTcwMTUzMTUsMjQ2MzI4OTYyLDI0NjMyODk2
-MiwyMDMzMjcwNzQwLC0xMzU5MTcwNzE4LC0xNDY4MDc1MTY0LD
-E4NTE3NTEyMTYsMjU0Mzk2ODg1LC03ODk4NTgwNzIsMTc4Mzc5
-MDU0OSwyMDUzOTQxMzc5LC0yMTAwMTI1ODMyLC05ODM5OTg3OT
-IsLTExNjkzNjYzNTUsLTYxOTk5NjIyNCw2MTMzNDYwMDQsNjU3
-Njc1NDYwLDE0ODM0MjYyMTMsLTEzNzU3MzI1MDddfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls5MD
+U5NTQ1MTYsMTg1MjcyNjcwNCwtNzE3MDE1MzE1LDI0NjMyODk2
+MiwyNDYzMjg5NjIsMjAzMzI3MDc0MCwtMTM1OTE3MDcxOCwtMT
+Q2ODA3NTE2NCwxODUxNzUxMjE2LDI1NDM5Njg4NSwtNzg5ODU4
+MDcyLDE3ODM3OTA1NDksMjA1Mzk0MTM3OSwtMjEwMDEyNTgzMi
+wtOTgzOTk4NzkyLC0xMTY5MzY2MzU1LC02MTk5OTYyMjQsNjEz
+MzQ2MDA0LDY1NzY3NTQ2MCwxNDgzNDI2MjEzXX0=
 -->
