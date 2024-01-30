@@ -804,6 +804,7 @@ float3 GetScattering(AtmosphereParameters atmosphere,
 		texture(scattering_texture, uvw1) * lerp);
 }
 ~~~
+最后，我们在这里提供一个便捷的查找函数，它将在下一部分中很有用。该函数返回单次散射，其中包括相位函数，或者是 n 阶散射，其中 n > 1。它假设如果 `scattering_order` 严格大于1，那么 `multiple_scattering_texture` 对应于该散射阶数，其中包括了雷利散射和米氏散射，以及所有相位函数项。
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -824,11 +825,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls1OD
-A1MzIyMjEsLTk2OTA1NjM0MywxMTA5Mzk4OTYxLC01NTgxOTkx
-MzQsLTE0NDU3MDA2MjUsLTE3NjQwNTc3MzMsLTM1NzcxNTA0MS
-w1OTUzMDY5ODMsODA0OTczMDUzLC00MzY1MjEyMjAsLTI5MTQz
-ODk0MCwtOTIxOTA5MTQ0LDEzNzExNTc5NzYsLTEyMDgxNzA2Mz
-EsLTE3MjgzNDQ1ODksLTk2NjEzMzg5MywtMTUzOTQzNjE5NCw3
-NTUzMTc2MzAsMTU3ODYyODM4NCw5MzE0MDE4NThdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls5Nj
+EwOTUyMTAsNTgwNTMyMjIxLC05NjkwNTYzNDMsMTEwOTM5ODk2
+MSwtNTU4MTk5MTM0LC0xNDQ1NzAwNjI1LC0xNzY0MDU3NzMzLC
+0zNTc3MTUwNDEsNTk1MzA2OTgzLDgwNDk3MzA1MywtNDM2NTIx
+MjIwLC0yOTE0Mzg5NDAsLTkyMTkwOTE0NCwxMzcxMTU3OTc2LC
+0xMjA4MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYxMzM4OTMsLTE1
+Mzk0MzYxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzODRdfQ==
 -->
