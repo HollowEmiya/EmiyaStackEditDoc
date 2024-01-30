@@ -758,8 +758,8 @@ $$
 \cos(\alpha-\theta)=\cos\alpha\cdot\cos\theta+\sin\alpha\cdot\sin\theta
 \end{aligned}
 $$
-<front color="red">为什么 `SCATTRING_TEXTURE_NU_SIZE - 1`? 这样 nu 的 coord 是 [0,1]
-但是 mu_s, mu, r 都是 [0,1)</front>
+<font color=#EF4F00>为什么 `SCATTRING_TEXTURE_NU_SIZE - 1`? 这样 nu 的 coord 是 [0,1]
+但是 mu_s, mu, r 都是 [0,1)</font>
 
 完整的单散射预计算方法如下：
 ~~~C++
@@ -819,11 +819,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-g4MDE2MTgzNywtMTQ0NTcwMDYyNSwtMTc2NDA1NzczMywtMzU3
-NzE1MDQxLDU5NTMwNjk4Myw4MDQ5NzMwNTMsLTQzNjUyMTIyMC
-wtMjkxNDM4OTQwLC05MjE5MDkxNDQsMTM3MTE1Nzk3NiwtMTIw
-ODE3MDYzMSwtMTcyODM0NDU4OSwtOTY2MTMzODkzLC0xNTM5ND
-M2MTk0LDc1NTMxNzYzMCwxNTc4NjI4Mzg0LDkzMTQwMTg1OCwt
-MTM4NTU3NzYwOCwxMTc1MzE5NTEwLDI5ODc0OTQ5OF19
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNT
+U4MTk5MTM0LC0xNDQ1NzAwNjI1LC0xNzY0MDU3NzMzLC0zNTc3
+MTUwNDEsNTk1MzA2OTgzLDgwNDk3MzA1MywtNDM2NTIxMjIwLC
+0yOTE0Mzg5NDAsLTkyMTkwOTE0NCwxMzcxMTU3OTc2LC0xMjA4
+MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYxMzM4OTMsLTE1Mzk0Mz
+YxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzODQsOTMxNDAxODU4LC0x
+Mzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4NzQ5NDk4XX0=
 -->
