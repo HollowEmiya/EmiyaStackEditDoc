@@ -861,7 +861,8 @@ float3 GetScattering(
 * 预计算单次散射存储在 texture 中
 * 如果散射层级 n ≥ 2:
 	* 用三重积分预先计算第 n 级的散射，其被积函数存在第 (n-1) 次散射纹理中。
-这种策略避免了许多冗余计算，但并没有消除所有的冗余。例如，考虑下图中的点p和p′，以及计算在经过n次反弹后从方向ω到达这两点的光的必要计算。这些计算涉及到对在点q处沿着方向−ω散射的辐射L的评估，以及经过n−1次反弹后来自所有方向的辐射：
+这种策略避免了许多冗余计算，但并没有消除所有的冗余。例如，考虑下图中的点p和p′，以及计算在经过n次反弹后从方向ω到达这两点的光的必要计算。这些计算涉及到对在点q处沿着方向−ω散射的辐射L的评估，以及经过n−1次反弹后来自所有方向的辐射：  
+![enter image description here](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/multipleScatteringCompute.png?raw=true)
 
 ## 参考
 
@@ -883,11 +884,12 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOT
-U2NTE4ODU0LC0xMjg4NDUwNDM2LC00OTgxNzU1ODEsLTEzMzIz
-MjY0MDAsLTM4NjY1OTk3MiwtMjEwMDczMjcyOSwyMTI4NDE3ND
-c5LC00MDA5MjQ2OTIsLTE0NjY4OTc5MzIsLTE1NjY0NzIxOSwt
-MTI3ODg2MzY1NCw1ODA1MzIyMjEsLTk2OTA1NjM0MywxMTA5Mz
-k4OTYxLC01NTgxOTkxMzQsLTE0NDU3MDA2MjUsLTE3NjQwNTc3
-MzMsLTM1NzcxNTA0MSw1OTUzMDY5ODMsODA0OTczMDUzXX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+Y5NzUzMzA2MywxOTU2NTE4ODU0LC0xMjg4NDUwNDM2LC00OTgx
+NzU1ODEsLTEzMzIzMjY0MDAsLTM4NjY1OTk3MiwtMjEwMDczMj
+cyOSwyMTI4NDE3NDc5LC00MDA5MjQ2OTIsLTE0NjY4OTc5MzIs
+LTE1NjY0NzIxOSwtMTI3ODg2MzY1NCw1ODA1MzIyMjEsLTk2OT
+A1NjM0MywxMTA5Mzk4OTYxLC01NTgxOTkxMzQsLTE0NDU3MDA2
+MjUsLTE3NjQwNTc3MzMsLTM1NzcxNTA0MSw1OTUzMDY5ODNdfQ
+==
 -->
