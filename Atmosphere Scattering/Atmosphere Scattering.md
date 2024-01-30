@@ -850,6 +850,8 @@ float3 GetScattering(
   }
 }
 ~~~
+## Multiple S
+
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -870,11 +872,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls0MT
-M1MzY0OTYsMjEyODQxNzQ3OSwtNDAwOTI0NjkyLC0xNDY2ODk3
-OTMyLC0xNTY2NDcyMTksLTEyNzg4NjM2NTQsNTgwNTMyMjIxLC
-05NjkwNTYzNDMsMTEwOTM5ODk2MSwtNTU4MTk5MTM0LC0xNDQ1
-NzAwNjI1LC0xNzY0MDU3NzMzLC0zNTc3MTUwNDEsNTk1MzA2OT
-gzLDgwNDk3MzA1MywtNDM2NTIxMjIwLC0yOTE0Mzg5NDAsLTky
-MTkwOTE0NCwxMzcxMTU3OTc2LC0xMjA4MTcwNjMxXX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxNj
+MwMTgzMDAzLDIxMjg0MTc0NzksLTQwMDkyNDY5MiwtMTQ2Njg5
+NzkzMiwtMTU2NjQ3MjE5LC0xMjc4ODYzNjU0LDU4MDUzMjIyMS
+wtOTY5MDU2MzQzLDExMDkzOTg5NjEsLTU1ODE5OTEzNCwtMTQ0
+NTcwMDYyNSwtMTc2NDA1NzczMywtMzU3NzE1MDQxLDU5NTMwNj
+k4Myw4MDQ5NzMwNTMsLTQzNjUyMTIyMCwtMjkxNDM4OTQwLC05
+MjE5MDkxNDQsMTM3MTE1Nzk3NiwtMTIwODE3MDYzMV19
 -->
