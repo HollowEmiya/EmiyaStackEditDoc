@@ -860,7 +860,7 @@ float3 GetScattering(
 这个描述表明，每个散射阶数都需要从前一个阶数计算一个三重积分<font color=#AFAFAF>（在方向 ω 中，沿着从 p 到最近的大气边界的线段上的所有点 q 进行 <u> 一次积分 </u>，以及在每个点 q 处对所有方向进行嵌套的<u>双重积分</u>）</font>。因此，如果我们想要从头计算每个阶数，我们将需要为双次散射进行三重积分，为三次散射进行六重积分(二次的三次+自己三次)，依此类推。这显然是低效的，因为存在大量冗余计算<font color=#AFAFAF> (阶数n的计算基本上会重新进行所有先前阶数的计算，导致总阶数的二次复杂度)</font>。相反，以下方法更为高效：
 * 预计算单次散射存储在 texture 中
 * 如果散射层级 n ≥ 2:
-	* 用三重积分预先计算第 n 级的散射
+	* 用三重积分预先计算第 n 级的散射，其被积函数存在第 (n-1) 次散射纹理中。
 
 ## 参考
 
@@ -883,7 +883,7 @@ JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
 cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-UwOTI0MzE4NCwtNDk4MTc1NTgxLC0xMzMyMzI2NDAwLC0zODY2
+I4ODQ1MDQzNiwtNDk4MTc1NTgxLC0xMzMyMzI2NDAwLC0zODY2
 NTk5NzIsLTIxMDA3MzI3MjksMjEyODQxNzQ3OSwtNDAwOTI0Nj
 kyLC0xNDY2ODk3OTMyLC0xNTY2NDcyMTksLTEyNzg4NjM2NTQs
 NTgwNTMyMjIxLC05NjkwNTYzNDMsMTEwOTM5ODk2MSwtNTU4MT
