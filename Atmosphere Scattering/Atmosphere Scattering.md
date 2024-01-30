@@ -804,7 +804,32 @@ float3 GetScattering(AtmosphereParameters atmosphere,
 		texture(scattering_texture, uvw1) * lerp);
 }
 ~~~
-最后，我们在这里提供一个便捷的查找函数，它将在下一部分中很有用。该函数返回单次散射，其中包括相位函数，或者是 n 阶散射，其中 n > 1。它假设如果 `scattering_order` 严格大于1，那么 `multiple_scattering_texture` 对应于该散射阶数，其中包括了雷利散射和米氏散射，以及所有相位函数项。
+最后，在这里提供一个便捷的查找函数，它将在下一部分中很有用。该函数返回单次散射，其中包括相位函数，或者是 n 阶散射，其中 n > 1。它假设如果 `scattering_order` 严格大于1，那么 `multiple_scattering_texture` 对应于该散射阶数，其中包括了rayleigh 散射和 mie 散射，以及所有相位函数项。
+~~~C++
+RadianceSpectrum GetScattering(
+    IN(AtmosphereParameters) atmosphere,
+    IN(ReducedScatteringTexture) single_rayleigh_scattering_texture,
+    IN(ReducedScatteringTexture) single_mie_scattering_texture,
+    IN(ScatteringTexture) multiple_scattering_texture,
+    Length r, Number mu, Number mu_s, Number nu,
+    bool ray_r_mu_intersects_ground,
+    int scattering_order) {
+  if (scattering_order == 1) {
+    IrradianceSpectrum rayleigh = GetScattering(
+        atmosphere, single_rayleigh_scattering_texture, r, mu, mu_s, nu,
+        ray_r_mu_intersects_ground);
+    IrradianceSpectrum mie = GetScattering(
+        atmosphere, single_mie_scattering_texture, r, mu, mu_s, nu,
+        ray_r_mu_intersects_ground);
+    return rayleigh * RayleighPhaseFunction(nu) +
+        mie * MiePhaseFunction(atmosphere.mie_phase_function_g, nu);
+  } else {
+    return GetScattering(
+        atmosphere, multiple_scattering_texture, r, mu, mu_s, nu,
+        ray_r_mu_intersects_ground);
+  }
+}
+~~~
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -825,11 +850,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls5Nj
-EwOTUyMTAsNTgwNTMyMjIxLC05NjkwNTYzNDMsMTEwOTM5ODk2
-MSwtNTU4MTk5MTM0LC0xNDQ1NzAwNjI1LC0xNzY0MDU3NzMzLC
-0zNTc3MTUwNDEsNTk1MzA2OTgzLDgwNDk3MzA1MywtNDM2NTIx
-MjIwLC0yOTE0Mzg5NDAsLTkyMTkwOTE0NCwxMzcxMTU3OTc2LC
-0xMjA4MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYxMzM4OTMsLTE1
-Mzk0MzYxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzODRdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOD
+M0MDY2NDQ2LDU4MDUzMjIyMSwtOTY5MDU2MzQzLDExMDkzOTg5
+NjEsLTU1ODE5OTEzNCwtMTQ0NTcwMDYyNSwtMTc2NDA1NzczMy
+wtMzU3NzE1MDQxLDU5NTMwNjk4Myw4MDQ5NzMwNTMsLTQzNjUy
+MTIyMCwtMjkxNDM4OTQwLC05MjE5MDkxNDQsMTM3MTE1Nzk3Ni
+wtMTIwODE3MDYzMSwtMTcyODM0NDU4OSwtOTY2MTMzODkzLC0x
+NTM5NDM2MTk0LDc1NTMxNzYzMCwxNTc4NjI4Mzg0XX0=
 -->
