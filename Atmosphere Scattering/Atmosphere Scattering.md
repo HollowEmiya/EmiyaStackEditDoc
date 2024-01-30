@@ -435,7 +435,7 @@ $$
 
 ## Single Scattering
 
-单散射辐射是太阳射出的光线，(由于空气中分子或者气溶胶粒子; 排除地面的散射，单独计算)经过大气中某一点只发生一次散射的情况。下面将介绍如何计算、存储在LUT中，读取。
+单散射辐射是太阳射出的光线，(由于空气中分子或者气溶胶粒子; 排除地面的散射，单独计算)经过大气中某一点只发生一次散射的情况。下面将介绍如何计算、存储在LUT中，读取。  
 
 > [地面散射](https://ebruneton.github.io/precomputed_atmospheric_scattering/atmosphere/functions.glsl.html#irradiance)
 
@@ -588,8 +588,8 @@ $$
 &\nu:\cos\theta_{s_d}\;\; sun \; direction \; to \; ray\; direction.
 \end{aligned}
 $$
-和 4D texture 对应 $(r,\mu,\mu_s,\nu)\rightarrow(u,v,w,z)$，下面的映射基于Eric 的 paper:[Precomputed Atmospheric Scattering](https://inria.hal.science/inria-00288758/en) 并有部分改进()：
-* $\mu:\cos\theta$ 的映射考虑到最近大气层的最小距离，将 $\mu$ 映射到 $[0,1]$，原始方法未能覆盖$[0,1]$所有值。
+和 4D texture 对应 $(r,\mu,\mu_s,\nu)\rightarrow(u,v,w,z)$，下面的映射基于Eric 的 paper:[Precomputed Atmospheric Scattering](https://inria.hal.science/inria-00288758/en) 并有部分改进()：  
+* $\mu:\cos\theta$ 的映射考虑到最近大气层的最小距离，将 $\mu$ 映射到 $[0,1]$，原始方法未能覆盖$[0,1]$所有值。  
 * $\mu_s:\cos\theta_{sun}$ 的映射比 paper 里的要复杂，(原本映射是使用了为地球大气情况选择的临时参数)，该映射基于到达顶层大气边界的距离（适用于太阳光线），与 μ 映射类似，只使用一个临时（但可配置）的参数。并且，与原始定义一样，它在地平线附近提供了增加的采样率。
 ~~~C++
 // (nu,mu_s,mu,r)
@@ -664,9 +664,9 @@ float4 GetScatteringTextureUvwzFromRMuMuSNu(
 	return vec4(u_nu, u_mu_s, u_mu, u_r);
 }
 ~~~
-[uvwz - GeoGebra](https://www.geogebra.org/geometry/hvfwsrc7)
-[Atmo_mu_s | Desmos](https://www.desmos.com/calculator/yyplzlmfvv?lang=zh-CN)
-在 $\mu_s=0$ 处斜率小，$\mu_s$ 会对应更多的 UV 值。
+[uvwz - GeoGebra](https://www.geogebra.org/geometry/hvfwsrc7)  
+[Atmo_mu_s | Desmos](https://www.desmos.com/calculator/yyplzlmfvv?lang=zh-CN)  
+在 $\mu_s=0$ 处斜率小，$\mu_s$ 会对应更多的 UV 值。  
 
 逆变换如下：
 ~~~C++
@@ -763,13 +763,13 @@ $$
 \cos(\alpha-\theta)=\cos\alpha\cdot\cos\theta+\sin\alpha\cdot\sin\theta
 \end{aligned}
 $$
-<font color=#EF4F00>为什么 `SCATTRING_TEXTURE_NU_SIZE - 1`? 
-这样 nu 的 coord 是 [0,1],
-但是 mu_s, mu, r 都是 [0,1)即$[0,1-\frac{1.0}{tex\_size}]$</font>
-<font color=#055000>如果要和后面`GetUnitRangeFromTextureCoord`对应，那在 0 处就错了，是 $\frac{-0.5}{tex\_size}$
-所以是否 frag_coord 的范围就是 $[\frac{0.5}{frag\_size},1-\frac{0.5}{frag\_size}]$
-这样对 $r,\mu,\mu_s$ 的纹理变换都是正常范围和前面规定的 unit range <-> texcoord 一致
-而 $\nu$ 因为使用 floor 函数，也是正常得到[0,nu_size-1]后面可以变为[0,1]
+<font color=#EF4F00>为什么 `SCATTRING_TEXTURE_NU_SIZE - 1`?   
+这样 nu 的 coord 是 [0,1],  
+但是 mu_s, mu, r 都是 [0,1)即$[0,1-\frac{1.0}{tex\_size}]$</font>  
+<font color=#055000>如果要和后面`GetUnitRangeFromTextureCoord`对应，那在 0 处就错了，是 $\frac{-0.5}{tex\_size}$  
+所以是否 frag_coord 的范围就是 $[\frac{0.5}{frag\_size},1-\frac{0.5}{frag\_size}]$，  
+这样对 $r,\mu,\mu_s$ 的纹理变换都是正常范围和前面规定的 unit range <-> texcoord 一致，  
+而 $\nu$ 因为使用 floor 函数，也是正常得到[0,nu_size-1]后面可以变为[0,1]。  
 这样一切都对了</font>
 
 <font color=red> **为什么** `SCATTRING_TEXTURE_NU_SIZE - 1` **?**  </font>
@@ -862,13 +862,13 @@ float3 GetScattering(
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJGUDZ1dU9HcGQ4Wno1NFdtIjp7In
-N0YXJ0IjoyMzY2MywiZW5kIjoyMzY4OSwidGV4dCI6InJheV9y
+N0YXJ0IjoyMzY2OSwiZW5kIjoyMzY5NSwidGV4dCI6InJheV9y
 X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
 cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-Y3OTk4NDMzOSwyMTI4NDE3NDc5LC00MDA5MjQ2OTIsLTE0NjY4
+UwMDE0Nzc2NCwyMTI4NDE3NDc5LC00MDA5MjQ2OTIsLTE0NjY4
 OTc5MzIsLTE1NjY0NzIxOSwtMTI3ODg2MzY1NCw1ODA1MzIyMj
 EsLTk2OTA1NjM0MywxMTA5Mzk4OTYxLC01NTgxOTkxMzQsLTE0
 NDU3MDA2MjUsLTE3NjQwNTc3MzMsLTM1NzcxNTA0MSw1OTUzMD
