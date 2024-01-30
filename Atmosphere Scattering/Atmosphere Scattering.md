@@ -237,7 +237,7 @@ float3 ComputeTransmittanceToTopAtmosphereBoundary(
 我要将所有的计算结果存起来就是将 值[0,1] 映射到 n个纹理的 [0.5/n, 1 - 0.5/n]  
 整个 纹理uv 的实际范围大小其实是 1-0.5/n - 0.5/n 
 
-> For this we need a mapping between the function parameters (r,μ) and the texture coordinates (u,v), and vice-versa, because these parameters do not have the same units and range of values. And even if it was the case, storing a function f from the [0,1][0,1] interval in a texture of size n would sample the function at 0.5/n, 1.5/n, ... (n−0.5)/n, because texture samples are at the center of texels. Therefore, this texture would only give us extrapolated function values at the domain boundaries (00 and 11). To avoid this we need to store f(0) at the center of texel 0 and f(1) at the center of texel n−1. This can be done with the following mapping from values x in [0,1][0,1] to texture coordinates u in [0.5/n,1−0.5/n][0.5/�,1−0.5/�] - and its inverse:
+> For this we need a mapping between the function parameters (r,μ) and the texture coordinates (u,v), and vice-versa, because these parameters do not have the same units and range of values. And even if it was the case, storing a function f from the [0,1] interval in a texture of size n would sample the function at 0.5/n, 1.5/n, ... (n−0.5)/n, because texture samples are at the center of texels. Therefore, this texture would only give us extrapolated function values at the domain boundaries (00 and 11). To avoid this we need to store f(0) at the center of texel 0 and f(1) at the center of texel n−1. This can be done with the following mapping from values x in [0,1] to texture coordinates u in [0.5/n,1−0.5/n] - and its inverse:
 
 ~~~c++
 float GetTextureCoordFromUnitRange(float x, int tex_size)
@@ -845,16 +845,16 @@ float3 GetScattering(
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJGUDZ1dU9HcGQ4Wno1NFdtIjp7In
-N0YXJ0IjoyMzQwMywiZW5kIjoyMzQyOSwidGV4dCI6InJheV9y
+N0YXJ0IjoyMzM3OCwiZW5kIjoyMzQwNCwidGV4dCI6InJheV9y
 X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
 cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-I3ODg2MzY1NCw1ODA1MzIyMjEsLTk2OTA1NjM0MywxMTA5Mzk4
-OTYxLC01NTgxOTkxMzQsLTE0NDU3MDA2MjUsLTE3NjQwNTc3Mz
-MsLTM1NzcxNTA0MSw1OTUzMDY5ODMsODA0OTczMDUzLC00MzY1
-MjEyMjAsLTI5MTQzODk0MCwtOTIxOTA5MTQ0LDEzNzExNTc5Nz
-YsLTEyMDgxNzA2MzEsLTE3MjgzNDQ1ODksLTk2NjEzMzg5Mywt
-MTUzOTQzNjE5NCw3NTUzMTc2MzAsMTU3ODYyODM4NF19
+U2NjQ3MjE5LC0xMjc4ODYzNjU0LDU4MDUzMjIyMSwtOTY5MDU2
+MzQzLDExMDkzOTg5NjEsLTU1ODE5OTEzNCwtMTQ0NTcwMDYyNS
+wtMTc2NDA1NzczMywtMzU3NzE1MDQxLDU5NTMwNjk4Myw4MDQ5
+NzMwNTMsLTQzNjUyMTIyMCwtMjkxNDM4OTQwLC05MjE5MDkxND
+QsMTM3MTE1Nzk3NiwtMTIwODE3MDYzMSwtMTcyODM0NDU4OSwt
+OTY2MTMzODkzLC0xNTM5NDM2MTk0LDc1NTMxNzYzMF19
 -->
