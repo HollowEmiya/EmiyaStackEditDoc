@@ -790,9 +790,11 @@ float3 GetScattering(AtmosphereParameters atmosphere,
 		r, mu, mu_s, nu, ray_r_mu_intersects_ground);
 	// tex_coord_x 获取 真正采样所期望的 coord
 	float tex_coord_x = uvwz.x * float(SCATTERING_TEXCOORD_NU_SIZE - 1);
-	// cai'y
+	// 实际采样的起始点
 	float tex_x = floor(tex_coord_x);
+	// 两个采样做插值的lerp值
 	float lerp = tex_coord_x - tex_x;
+	
 	float3 uvw0 = float3( (tex_x + uvwz.y) / float(SCATTERING_TEXTURE_NU_SIZE), 
 		uvwz.z, uvwz.w);
 	float3 uvw1 = float3( (tex_x + 1.0 + uvwz.y) / float(SCATTERING_TEXTURE_NU_SIZE), 
@@ -821,11 +823,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-Q4NTQ5Mzc1MSwtNTU4MTk5MTM0LC0xNDQ1NzAwNjI1LC0xNzY0
-MDU3NzMzLC0zNTc3MTUwNDEsNTk1MzA2OTgzLDgwNDk3MzA1My
-wtNDM2NTIxMjIwLC0yOTE0Mzg5NDAsLTkyMTkwOTE0NCwxMzcx
-MTU3OTc2LC0xMjA4MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYxMz
-M4OTMsLTE1Mzk0MzYxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzODQs
-OTMxNDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1MTBdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMT
+A5Mzk4OTYxLC01NTgxOTkxMzQsLTE0NDU3MDA2MjUsLTE3NjQw
+NTc3MzMsLTM1NzcxNTA0MSw1OTUzMDY5ODMsODA0OTczMDUzLC
+00MzY1MjEyMjAsLTI5MTQzODk0MCwtOTIxOTA5MTQ0LDEzNzEx
+NTc5NzYsLTEyMDgxNzA2MzEsLTE3MjgzNDQ1ODksLTk2NjEzMz
+g5MywtMTUzOTQzNjE5NCw3NTUzMTc2MzAsMTU3ODYyODM4NCw5
+MzE0MDE4NTgsLTEzODU1Nzc2MDgsMTE3NTMxOTUxMF19
 -->
