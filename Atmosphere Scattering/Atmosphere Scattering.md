@@ -857,6 +857,7 @@ float3 GetScattering(
 ### Computation
 多次散射可以分解为双次散射、三次散射等的总和，其中每级对应于太阳光在大气中经过确切的2、3等次反弹后到达某一点的光。此外，每一级都可以从前一级计算出来。实际上，从方向 ω 经过n次反弹到达某一点 p 的光是对所有可能的最后一次反弹点 q 的积分，其中涉及从任意方向经过 n−1 次反弹到达 q 点的光。
 
+这个描述表明，每个散射阶数都需要从前一个阶数计算一个三重积分（在方向 ω 中，沿着从 p 到最近的大气边界的线段上的所有点 q 进行<underline>一次积分，以及在每个点 q 处对所有方向进行嵌套的双重积分）。因此，如果我们想要从头计算每个阶数，我们将需要为双次散射进行三重积分，为三次散射进行六重积分，依此类推。这显然是低效的，因为存在大量冗余计算（阶数n的计算基本上会重新进行所有先前阶数的计算，导致总阶数的二次复杂度）。相反，以下方法更为高效：
 
 ## 参考
 
@@ -878,8 +879,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxNz
-UzMjkwMzU4LC0xMzMyMzI2NDAwLC0zODY2NTk5NzIsLTIxMDA3
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOT
+Y5OTY4Njk3LC0xMzMyMzI2NDAwLC0zODY2NTk5NzIsLTIxMDA3
 MzI3MjksMjEyODQxNzQ3OSwtNDAwOTI0NjkyLC0xNDY2ODk3OT
 MyLC0xNTY2NDcyMTksLTEyNzg4NjM2NTQsNTgwNTMyMjIxLC05
 NjkwNTYzNDMsMTEwOTM5ODk2MSwtNTU4MTk5MTM0LC0xNDQ1Nz
