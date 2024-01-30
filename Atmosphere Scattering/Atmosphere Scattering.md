@@ -758,7 +758,8 @@ $$
 \cos(\alpha-\theta)=\cos\alpha\cdot\cos\theta+\sin\alpha\cdot\sin\theta
 \end{aligned}
 $$
-为什么 `SCATTRING_TEXTURE_NU_SIZE - 1`? 这样 nu 的 
+为什么 `SCATTRING_TEXTURE_NU_SIZE - 1`? 这样 nu 的 coord 是 [0,1]
+但是 mu_s, mu, r 都是 [0,1)
 
 完整的单散射预计算方法如下：
 ~~~C++
@@ -819,7 +820,7 @@ JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
 cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-AwNDA0NTkxMiwtMTc2NDA1NzczMywtMzU3NzE1MDQxLDU5NTMw
+Q0NTcwMDYyNSwtMTc2NDA1NzczMywtMzU3NzE1MDQxLDU5NTMw
 Njk4Myw4MDQ5NzMwNTMsLTQzNjUyMTIyMCwtMjkxNDM4OTQwLC
 05MjE5MDkxNDQsMTM3MTE1Nzk3NiwtMTIwODE3MDYzMSwtMTcy
 ODM0NDU4OSwtOTY2MTMzODkzLC0xNTM5NDM2MTk0LDc1NTMxNz
