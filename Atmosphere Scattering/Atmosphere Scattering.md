@@ -766,7 +766,8 @@ $$
 <font color=#EF4F00>为什么 `SCATTRING_TEXTURE_NU_SIZE - 1`? 
 这样 nu 的 coord 是 [0,1],
 但是 mu_s, mu, r 都是 [0,1)即$[0,1-\frac{1.0}{tex\_size}]$</font>
-<font color=#055000>如果要和后面`GetUnitRangeFromTextureCoord`对应，那在 0 处就错了，</font>
+<font color=#055000>如果要和后面`GetUnitRangeFromTextureCoord`对应，那在 0 处就错了，是 $\frac{-0.5}{tex\_size}$
+所以是否 frag_coord 的范围就是 [\frac{0.5/frag\_size]</font>
 
 <font color=red> **为什么** `SCATTRING_TEXTURE_NU_SIZE - 1` **?**  </font>
 首先这里得到的 frag_coord_应该是[0,nu_size]，而 texcoord 即为 [0,1]
@@ -863,8 +864,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNj
-UzOTExMzE5LDIxMjg0MTc0NzksLTQwMDkyNDY5MiwtMTQ2Njg5
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxND
+kzMDU3MzM5LDIxMjg0MTc0NzksLTQwMDkyNDY5MiwtMTQ2Njg5
 NzkzMiwtMTU2NjQ3MjE5LC0xMjc4ODYzNjU0LDU4MDUzMjIyMS
 wtOTY5MDU2MzQzLDExMDkzOTg5NjEsLTU1ODE5OTEzNCwtMTQ0
 NTcwMDYyNSwtMTc2NDA1NzczMywtMzU3NzE1MDQxLDU5NTMwNj
