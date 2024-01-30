@@ -861,7 +861,8 @@ float3 GetScattering(
 * 预计算单次散射存储在 texture 中
 * 如果散射层级 n ≥ 2:
 	* 用三重积分预先计算第 n 级的散射，其被积函数存在第 (n-1) 次散射纹理中。
-这样可以避免一些冗余计算但是不能完全杜绝，比如下面点 p 和 点 p' 以及计算 n 次反射后从 
+这样可以避免一些冗余计算但是不能完全杜绝，  
+比如下面点 p 和 点 p' 以及计算 n 次反射后从 ω 方向到达这两点的光所需要进行的计算。具体来讲包括 q 方向散射的辐亮度 radiance L 的
 
 ## 参考
 
@@ -883,11 +884,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMj
-AyODE0MzM3NCwtMTI4ODQ1MDQzNiwtNDk4MTc1NTgxLC0xMzMy
-MzI2NDAwLC0zODY2NTk5NzIsLTIxMDA3MzI3MjksMjEyODQxNz
-Q3OSwtNDAwOTI0NjkyLC0xNDY2ODk3OTMyLC0xNTY2NDcyMTks
-LTEyNzg4NjM2NTQsNTgwNTMyMjIxLC05NjkwNTYzNDMsMTEwOT
-M5ODk2MSwtNTU4MTk5MTM0LC0xNDQ1NzAwNjI1LC0xNzY0MDU3
-NzMzLC0zNTc3MTUwNDEsNTk1MzA2OTgzLDgwNDk3MzA1M119
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlszND
+c5OTM0NDUsLTEyODg0NTA0MzYsLTQ5ODE3NTU4MSwtMTMzMjMy
+NjQwMCwtMzg2NjU5OTcyLC0yMTAwNzMyNzI5LDIxMjg0MTc0Nz
+ksLTQwMDkyNDY5MiwtMTQ2Njg5NzkzMiwtMTU2NjQ3MjE5LC0x
+Mjc4ODYzNjU0LDU4MDUzMjIyMSwtOTY5MDU2MzQzLDExMDkzOT
+g5NjEsLTU1ODE5OTEzNCwtMTQ0NTcwMDYyNSwtMTc2NDA1Nzcz
+MywtMzU3NzE1MDQxLDU5NTMwNjk4Myw4MDQ5NzMwNTNdfQ==
 -->
