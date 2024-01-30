@@ -769,7 +769,8 @@ $$
 <font color=#055000>如果要和后面`GetUnitRangeFromTextureCoord`对应，那在 0 处就错了，是 $\frac{-0.5}{tex\_size}$
 所以是否 frag_coord 的范围就是 $[\frac{0.5}{frag\_size},1-\frac{0.5}{frag\_size}]$
 这样对 $r,\mu,\mu_s$ 的纹理变换都是正常范围和前面规定的 unit range <-> texcoord 一致
-而 $\nu$ 因为使用 floor 函数，也是正常得到[0,nusize</font>
+而 $\nu$ 因为使用 floor 函数，也是正常得到[0,nu_size-1]后面可以变为[0,1]
+这样一切都对了</font>
 
 <font color=red> **为什么** `SCATTRING_TEXTURE_NU_SIZE - 1` **?**  </font>
 首先这里得到的 frag_coord_应该是[0,nu_size]，而 texcoord 即为 [0,1]
@@ -866,11 +867,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOT
-YwMjE5MzkxLDIxMjg0MTc0NzksLTQwMDkyNDY5MiwtMTQ2Njg5
-NzkzMiwtMTU2NjQ3MjE5LC0xMjc4ODYzNjU0LDU4MDUzMjIyMS
-wtOTY5MDU2MzQzLDExMDkzOTg5NjEsLTU1ODE5OTEzNCwtMTQ0
-NTcwMDYyNSwtMTc2NDA1NzczMywtMzU3NzE1MDQxLDU5NTMwNj
-k4Myw4MDQ5NzMwNTMsLTQzNjUyMTIyMCwtMjkxNDM4OTQwLC05
-MjE5MDkxNDQsMTM3MTE1Nzk3NiwtMTIwODE3MDYzMV19
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+Y3OTk4NDMzOSwyMTI4NDE3NDc5LC00MDA5MjQ2OTIsLTE0NjY4
+OTc5MzIsLTE1NjY0NzIxOSwtMTI3ODg2MzY1NCw1ODA1MzIyMj
+EsLTk2OTA1NjM0MywxMTA5Mzk4OTYxLC01NTgxOTkxMzQsLTE0
+NDU3MDA2MjUsLTE3NjQwNTc3MzMsLTM1NzcxNTA0MSw1OTUzMD
+Y5ODMsODA0OTczMDUzLC00MzY1MjEyMjAsLTI5MTQzODk0MCwt
+OTIxOTA5MTQ0LDEzNzExNTc5NzYsLTEyMDgxNzA2MzFdfQ==
 -->
