@@ -863,7 +863,7 @@ float3 GetScattering(
 	* 用三重积分预先计算第 n 级的散射，其被积函数存在第 (n-1) 次散射纹理中。
 这种策略避免了许多冗余计算，但并没有消除所有的冗余。例如，考虑下图中的点p和p′，以及计算在经过n次反弹后从方向ω到达这两点的光的必要计算。这些计算涉及到对在点q处沿着方向−ω散射的辐射L的评估，以及经过n−1次反弹后来自所有方向的辐射：  
 ![enter image description here](https://github.com/HollowEmiya/EmiyaPicGoRepo/blob/main/AtmosphereScattering/multipleScatteringCompute.png?raw=true)
-因此，如果用如上的方法通过三次j
+因此，如果用如上的方法通过三重积分计算了第 n 级的散射，我们重复计算了 L 部分(
 ## 参考
 
 [ebruneton/precomputed_atmospheric_scattering: This project provides a new implementation of our EGSR 2008 paper "Precomputed Atmospheric Scattering". (github.com)](https://github.com/ebruneton/precomputed_atmospheric_scattering)  
@@ -884,12 +884,12 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-I1MTQ0MjU4NiwtMTY5NzUzMzA2MywxOTU2NTE4ODU0LC0xMjg4
-NDUwNDM2LC00OTgxNzU1ODEsLTEzMzIzMjY0MDAsLTM4NjY1OT
-k3MiwtMjEwMDczMjcyOSwyMTI4NDE3NDc5LC00MDA5MjQ2OTIs
-LTE0NjY4OTc5MzIsLTE1NjY0NzIxOSwtMTI3ODg2MzY1NCw1OD
-A1MzIyMjEsLTk2OTA1NjM0MywxMTA5Mzk4OTYxLC01NTgxOTkx
-MzQsLTE0NDU3MDA2MjUsLTE3NjQwNTc3MzMsLTM1NzcxNTA0MV
-19
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls5NT
+A3OTg3ODQsLTE2OTc1MzMwNjMsMTk1NjUxODg1NCwtMTI4ODQ1
+MDQzNiwtNDk4MTc1NTgxLC0xMzMyMzI2NDAwLC0zODY2NTk5Nz
+IsLTIxMDA3MzI3MjksMjEyODQxNzQ3OSwtNDAwOTI0NjkyLC0x
+NDY2ODk3OTMyLC0xNTY2NDcyMTksLTEyNzg4NjM2NTQsNTgwNT
+MyMjIxLC05NjkwNTYzNDMsMTEwOTM5ODk2MSwtNTU4MTk5MTM0
+LC0xNDQ1NzAwNjI1LC0xNzY0MDU3NzMzLC0zNTc3MTUwNDFdfQ
+==
 -->
