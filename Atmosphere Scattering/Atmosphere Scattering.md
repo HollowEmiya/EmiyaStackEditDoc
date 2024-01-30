@@ -769,7 +769,9 @@ $$
 <font color=#055000>如果要和后面`GetUnitRangeFromTextureCoord`</font>
 
 <font color=red> **为什么** `SCATTRING_TEXTURE_NU_SIZE - 1` **?**  </font>
-因为在 `GetRMuMuSNuFromScatteringTextureUvwz` 中，对 $\nu$ 直接进行 
+因为在 `GetRMuMuSNuFromScatteringTextureUvwz` 中，对 $\nu$ 直接进行 `uvwz.x * 2.0 - 1.0`
+没做额外的映射所以最简单粗暴的[0,1]，而且后面对 3D tex 采样有关 nu 的插值由我们手动进行，
+不必担心因为 纹理采样的外推导致采样结果不准确。
 
 完整的单散射预计算方法如下：
 ~~~C++
@@ -859,11 +861,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMj
-A1MTE3NjEyNiwyMTI4NDE3NDc5LC00MDA5MjQ2OTIsLTE0NjY4
-OTc5MzIsLTE1NjY0NzIxOSwtMTI3ODg2MzY1NCw1ODA1MzIyMj
-EsLTk2OTA1NjM0MywxMTA5Mzk4OTYxLC01NTgxOTkxMzQsLTE0
-NDU3MDA2MjUsLTE3NjQwNTc3MzMsLTM1NzcxNTA0MSw1OTUzMD
-Y5ODMsODA0OTczMDUzLC00MzY1MjEyMjAsLTI5MTQzODk0MCwt
-OTIxOTA5MTQ0LDEzNzExNTc5NzYsLTEyMDgxNzA2MzFdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOD
+gxMjI0NDU3LDIxMjg0MTc0NzksLTQwMDkyNDY5MiwtMTQ2Njg5
+NzkzMiwtMTU2NjQ3MjE5LC0xMjc4ODYzNjU0LDU4MDUzMjIyMS
+wtOTY5MDU2MzQzLDExMDkzOTg5NjEsLTU1ODE5OTEzNCwtMTQ0
+NTcwMDYyNSwtMTc2NDA1NzczMywtMzU3NzE1MDQxLDU5NTMwNj
+k4Myw4MDQ5NzMwNTMsLTQzNjUyMTIyMCwtMjkxNDM4OTQwLC05
+MjE5MDkxNDQsMTM3MTE1Nzk3NiwtMTIwODE3MDYzMV19
 -->
