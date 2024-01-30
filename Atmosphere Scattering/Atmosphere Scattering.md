@@ -806,12 +806,12 @@ float3 GetScattering(AtmosphereParameters atmosphere,
 ~~~
 最后，在这里提供一个便捷的查找函数，它将在下一部分中很有用。该函数返回单次散射，其中包括相位函数，或者是 n 阶散射，其中 n > 1。它假设如果 `scattering_order` 严格大于1，那么 `multiple_scattering_texture` 对应于该散射阶数，其中包括了rayleigh 散射和 mie 散射，以及所有相位函数项。
 ~~~C++
-RadianceSpectrum GetScattering(
+飞咯at GetScattering(
     IN(AtmosphereParameters) atmosphere,
     IN(ReducedScatteringTexture) single_rayleigh_scattering_texture,
     IN(ReducedScatteringTexture) single_mie_scattering_texture,
     IN(ScatteringTexture) multiple_scattering_texture,
-    Length r, Number mu, Number mu_s, Number nu,
+    float r, float mu, float mu_s, float nu,
     bool ray_r_mu_intersects_ground,
     int scattering_order) {
   if (scattering_order == 1) {
@@ -850,11 +850,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOD
-M0MDY2NDQ2LDU4MDUzMjIyMSwtOTY5MDU2MzQzLDExMDkzOTg5
-NjEsLTU1ODE5OTEzNCwtMTQ0NTcwMDYyNSwtMTc2NDA1NzczMy
-wtMzU3NzE1MDQxLDU5NTMwNjk4Myw4MDQ5NzMwNTMsLTQzNjUy
-MTIyMCwtMjkxNDM4OTQwLC05MjE5MDkxNDQsMTM3MTE1Nzk3Ni
-wtMTIwODE3MDYzMSwtMTcyODM0NDU4OSwtOTY2MTMzODkzLC0x
-NTM5NDM2MTk0LDc1NTMxNzYzMCwxNTc4NjI4Mzg0XX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+YzOTMyNjcyNSw1ODA1MzIyMjEsLTk2OTA1NjM0MywxMTA5Mzk4
+OTYxLC01NTgxOTkxMzQsLTE0NDU3MDA2MjUsLTE3NjQwNTc3Mz
+MsLTM1NzcxNTA0MSw1OTUzMDY5ODMsODA0OTczMDUzLC00MzY1
+MjEyMjAsLTI5MTQzODk0MCwtOTIxOTA5MTQ0LDEzNzExNTc5Nz
+YsLTEyMDgxNzA2MzEsLTE3MjgzNDQ1ODksLTk2NjEzMzg5Mywt
+MTUzOTQzNjE5NCw3NTUzMTc2MzAsMTU3ODYyODM4NF19
 -->
