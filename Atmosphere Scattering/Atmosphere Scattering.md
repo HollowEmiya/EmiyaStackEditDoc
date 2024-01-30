@@ -779,6 +779,9 @@ $$
 而且后面对 3D tex 采样有关 $\nu$ 的插值由我们手动进行，
 不必担心因为 纹理采样的外推导致采样结果不准确，也不需要做 texcoord 和 unit range 两者之间的转换。
 
+因为这里原文也没说 `frag_coord` 这个参数怎么处理，就……呃呃呃，我也懒得找了……  
+但是不这么处理肯定错了啊
+
 完整的单散射预计算方法如下：
 ~~~C++
 void ComputeSingleScatteringTexture(AtmosphereParameters atmosphere,
@@ -867,11 +870,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-UwMDE0Nzc2NCwyMTI4NDE3NDc5LC00MDA5MjQ2OTIsLTE0NjY4
-OTc5MzIsLTE1NjY0NzIxOSwtMTI3ODg2MzY1NCw1ODA1MzIyMj
-EsLTk2OTA1NjM0MywxMTA5Mzk4OTYxLC01NTgxOTkxMzQsLTE0
-NDU3MDA2MjUsLTE3NjQwNTc3MzMsLTM1NzcxNTA0MSw1OTUzMD
-Y5ODMsODA0OTczMDUzLC00MzY1MjEyMjAsLTI5MTQzODk0MCwt
-OTIxOTA5MTQ0LDEzNzExNTc5NzYsLTEyMDgxNzA2MzFdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls0MT
+M1MzY0OTYsMjEyODQxNzQ3OSwtNDAwOTI0NjkyLC0xNDY2ODk3
+OTMyLC0xNTY2NDcyMTksLTEyNzg4NjM2NTQsNTgwNTMyMjIxLC
+05NjkwNTYzNDMsMTEwOTM5ODk2MSwtNTU4MTk5MTM0LC0xNDQ1
+NzAwNjI1LC0xNzY0MDU3NzMzLC0zNTc3MTUwNDEsNTk1MzA2OT
+gzLDgwNDk3MzA1MywtNDM2NTIxMjIwLC0yOTE0Mzg5NDAsLTky
+MTkwOTE0NCwxMzcxMTU3OTc2LC0xMjA4MTcwNjMxXX0=
 -->
