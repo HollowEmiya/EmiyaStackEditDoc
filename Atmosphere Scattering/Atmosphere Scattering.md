@@ -788,6 +788,7 @@ float3 GetScattering(AtmosphereParameters atmosphere,
 {
 	float4 uvwz = GetScatteringTextureUvwzFromRMuMuSNu(atmosphere,
 		r, mu, mu_s, nu, ray_r_mu_intersects_ground);
+	// tex_cor
 	float tex_coord_x = uvwz.x * float(SCATTERING_TEXCOORD_NU_SIZE - 1);
 	float tex_x = floor(tex_coord_x);
 	float lerp = tex_coord_x - tex_x;
@@ -819,11 +820,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstNT
-U4MTk5MTM0LC0xNDQ1NzAwNjI1LC0xNzY0MDU3NzMzLC0zNTc3
-MTUwNDEsNTk1MzA2OTgzLDgwNDk3MzA1MywtNDM2NTIxMjIwLC
-0yOTE0Mzg5NDAsLTkyMTkwOTE0NCwxMzcxMTU3OTc2LC0xMjA4
-MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYxMzM4OTMsLTE1Mzk0Mz
-YxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzODQsOTMxNDAxODU4LC0x
-Mzg1NTc3NjA4LDExNzUzMTk1MTAsMjk4NzQ5NDk4XX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+QwMzUzNDAwNiwtNTU4MTk5MTM0LC0xNDQ1NzAwNjI1LC0xNzY0
+MDU3NzMzLC0zNTc3MTUwNDEsNTk1MzA2OTgzLDgwNDk3MzA1My
+wtNDM2NTIxMjIwLC0yOTE0Mzg5NDAsLTkyMTkwOTE0NCwxMzcx
+MTU3OTc2LC0xMjA4MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYxMz
+M4OTMsLTE1Mzk0MzYxOTQsNzU1MzE3NjMwLDE1Nzg2MjgzODQs
+OTMxNDAxODU4LC0xMzg1NTc3NjA4LDExNzUzMTk1MTBdfQ==
 -->
