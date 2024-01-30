@@ -240,12 +240,13 @@ float3 ComputeTransmittanceToTopAtmosphereBoundary(
 > For this we need a mapping between the function parameters (r,μ) and the texture coordinates (u,v), and vice-versa, because these parameters do not have the same units and range of values. And even if it was the case, storing a function f from the [0,1] interval in a texture of size n would sample the function at 0.5/n, 1.5/n, ... (n−0.5)/n, because texture samples are at the center of texels. Therefore, this texture would only give us extrapolated function values at the domain boundaries (00 and 11). To avoid this we need to store f(0) at the center of texel 0 and f(1) at the center of texel n−1. This can be done with the following mapping from values x in [0,1] to texture coordinates u in [0.5/n,1−0.5/n] - and its inverse:
 
 ~~~c++
-// 从 [0,1] 到  
+// 从 [0,1] 到防止插值的空间，进行采样
 float GetTextureCoordFromUnitRange(float x, int tex_size)
 {
     return 0.5/ tex_size + x * (1.0 - 1.0/tex_size);
 }
 
+// 从防插值空间变换到 [0,1] 进行数学计算
 float GetUnitRangeFromTextureCoord(float u, int tex_size)
 {
     return (u - 0.5 / tex_size) / (1.0 - 1.0 / tex_size);
@@ -846,16 +847,16 @@ float3 GetScattering(
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJGUDZ1dU9HcGQ4Wno1NFdtIjp7In
-N0YXJ0IjoyMzM5MywiZW5kIjoyMzQxOSwidGV4dCI6InJheV9y
+N0YXJ0IjoyMzQyOSwiZW5kIjoyMzQ1NSwidGV4dCI6InJheV9y
 X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxMj
-UxODA0NzU5LC0xNTY2NDcyMTksLTEyNzg4NjM2NTQsNTgwNTMy
-MjIxLC05NjkwNTYzNDMsMTEwOTM5ODk2MSwtNTU4MTk5MTM0LC
-0xNDQ1NzAwNjI1LC0xNzY0MDU3NzMzLC0zNTc3MTUwNDEsNTk1
-MzA2OTgzLDgwNDk3MzA1MywtNDM2NTIxMjIwLC0yOTE0Mzg5ND
-AsLTkyMTkwOTE0NCwxMzcxMTU3OTc2LC0xMjA4MTcwNjMxLC0x
-NzI4MzQ0NTg5LC05NjYxMzM4OTMsLTE1Mzk0MzYxOTRdfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+Q2Njg5NzkzMiwtMTU2NjQ3MjE5LC0xMjc4ODYzNjU0LDU4MDUz
+MjIyMSwtOTY5MDU2MzQzLDExMDkzOTg5NjEsLTU1ODE5OTEzNC
+wtMTQ0NTcwMDYyNSwtMTc2NDA1NzczMywtMzU3NzE1MDQxLDU5
+NTMwNjk4Myw4MDQ5NzMwNTMsLTQzNjUyMTIyMCwtMjkxNDM4OT
+QwLC05MjE5MDkxNDQsMTM3MTE1Nzk3NiwtMTIwODE3MDYzMSwt
+MTcyODM0NDU4OSwtOTY2MTMzODkzLC0xNTM5NDM2MTk0XX0=
 -->
