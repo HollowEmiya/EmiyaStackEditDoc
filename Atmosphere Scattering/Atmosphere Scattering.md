@@ -232,10 +232,10 @@ float3 ComputeTransmittanceToTopAtmosphereBoundary(
 
 ### Precomputation
 
-上面的计算过程肯定不能实时来了，但是我们可以用 r 和 cosTheta 两个参数，将所有的计算结果存储在一张 2D Tex 上。
+上述函数的计算成本相当高，而且需要大量的计算来进行单次和多次散射的计算。幸运的是，这个函数只依赖于两个参数，并且是相当平滑的，因此我们可以通过在一个小的2D纹理中预计算它来优化其计算。
 
-我要将所有的计算结果存起来就是将 值[0,1] 映射到 n个纹理的 [0.5/n, 1 - 0.5/n]  
-整个 纹理uv 的实际范围大小其实是 1-0.5/n - 0.5/n 
+为此，我们需要一个函数参数（r, μ）和纹理坐标（u, v）之间的映射，以及其反向映射，因为这些参数的单位和值范围不同。即使是在这种情况下，由于纹理采样在纹理元素中心，将函数 f 从 [0,1] 区间存储在大小为 n 的纹理中会在 0.5/n、1.5/n、... (n−0.5)/n 处进行采样。因此，这个纹理只会在域边界（0 和 1）处给我们外推的函数值。为了避免这种情况，我们需要在纹理元素0的中心存储 f(0) ，并在纹理元素 n−1 的中心存储 f(1) 。这可以通过以下从值 x 在 [0,1] 区间到纹理坐标 u 在 [0.5/n,1−0.5/n] 区间的映射及其反向映射来实现：
+
 
 > For this we need a mapping between the function parameters (r,μ) and the texture coordinates (u,v), and vice-versa, because these parameters do not have the same units and range of values. And even if it was the case, storing a function f from the [0,1] interval in a texture of size n would sample the function at 0.5/n, 1.5/n, ... (n−0.5)/n, because texture samples are at the center of texels. Therefore, this texture would only give us extrapolated function values at the domain boundaries (00 and 11). To avoid this we need to store f(0) at the center of texel 0 and f(1) at the center of texel n−1. This can be done with the following mapping from values x in [0,1] to texture coordinates u in [0.5/n,1−0.5/n] - and its inverse:
 
@@ -850,16 +850,16 @@ float3 GetScattering(
 [PicGo is Here | PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/#picgo-is-here)
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJGUDZ1dU9HcGQ4Wno1NFdtIjp7In
-N0YXJ0IjoyMzQyOSwiZW5kIjoyMzQ1NSwidGV4dCI6InJheV9y
+N0YXJ0IjoyMzY2MywiZW5kIjoyMzY4OSwidGV4dCI6InJheV9y
 X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsyMT
-I4NDE3NDc5LC00MDA5MjQ2OTIsLTE0NjY4OTc5MzIsLTE1NjY0
-NzIxOSwtMTI3ODg2MzY1NCw1ODA1MzIyMjEsLTk2OTA1NjM0My
-wxMTA5Mzk4OTYxLC01NTgxOTkxMzQsLTE0NDU3MDA2MjUsLTE3
-NjQwNTc3MzMsLTM1NzcxNTA0MSw1OTUzMDY5ODMsODA0OTczMD
-UzLC00MzY1MjEyMjAsLTI5MTQzODk0MCwtOTIxOTA5MTQ0LDEz
-NzExNTc5NzYsLTEyMDgxNzA2MzEsLTE3MjgzNDQ1ODldfQ==
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOD
+I4NTg2NTYsMjEyODQxNzQ3OSwtNDAwOTI0NjkyLC0xNDY2ODk3
+OTMyLC0xNTY2NDcyMTksLTEyNzg4NjM2NTQsNTgwNTMyMjIxLC
+05NjkwNTYzNDMsMTEwOTM5ODk2MSwtNTU4MTk5MTM0LC0xNDQ1
+NzAwNjI1LC0xNzY0MDU3NzMzLC0zNTc3MTUwNDEsNTk1MzA2OT
+gzLDgwNDk3MzA1MywtNDM2NTIxMjIwLC0yOTE0Mzg5NDAsLTky
+MTkwOTE0NCwxMzcxMTU3OTc2LC0xMjA4MTcwNjMxXX0=
 -->
