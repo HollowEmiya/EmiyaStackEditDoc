@@ -679,6 +679,7 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 	float H = sqrt(atmosphere.top_radius * atmosphere.top_radius -
 		atmosphere.bottom_radius * atmosphere.bottom_radius);
 	// Distance to horizon
+	// 从采样空间到数学 [0,1] 空间
 	float rho = H * GetUnitRangeFromTextureCoord(uvwz.w,
 		SCATTREING_TEXTURE_R_SIZE);
 	r = sqrt(rho*rho + 
@@ -720,6 +721,8 @@ void GetRMuMuSNuFromScatteringTextureUvwz(
 	float d = d_min + min(a, A) * (d_max - d_min);
 	mu_s = d == 0.0 ? 1.0 :
 		clamp((H * H - d * d) / (2.0 * atmosphere.bottom_radius * d), -1.0, 1.0);
+
+	// 注意这里 nu b
 	nu = clamp(uvwz.x * 2.0 - 1.0, -1.0, 1.0);
 }
 ~~~
@@ -852,11 +855,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-Q2Njg5NzkzMiwtMTU2NjQ3MjE5LC0xMjc4ODYzNjU0LDU4MDUz
-MjIyMSwtOTY5MDU2MzQzLDExMDkzOTg5NjEsLTU1ODE5OTEzNC
-wtMTQ0NTcwMDYyNSwtMTc2NDA1NzczMywtMzU3NzE1MDQxLDU5
-NTMwNjk4Myw4MDQ5NzMwNTMsLTQzNjUyMTIyMCwtMjkxNDM4OT
-QwLC05MjE5MDkxNDQsMTM3MTE1Nzk3NiwtMTIwODE3MDYzMSwt
-MTcyODM0NDU4OSwtOTY2MTMzODkzLC0xNTM5NDM2MTk0XX0=
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOls2OD
+E4OTc1MzIsLTE0NjY4OTc5MzIsLTE1NjY0NzIxOSwtMTI3ODg2
+MzY1NCw1ODA1MzIyMjEsLTk2OTA1NjM0MywxMTA5Mzk4OTYxLC
+01NTgxOTkxMzQsLTE0NDU3MDA2MjUsLTE3NjQwNTc3MzMsLTM1
+NzcxNTA0MSw1OTUzMDY5ODMsODA0OTczMDUzLC00MzY1MjEyMj
+AsLTI5MTQzODk0MCwtOTIxOTA5MTQ0LDEzNzExNTc5NzYsLTEy
+MDgxNzA2MzEsLTE3MjgzNDQ1ODksLTk2NjEzMzg5M119
 -->
