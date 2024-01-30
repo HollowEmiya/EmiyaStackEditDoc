@@ -788,8 +788,9 @@ float3 GetScattering(AtmosphereParameters atmosphere,
 {
 	float4 uvwz = GetScatteringTextureUvwzFromRMuMuSNu(atmosphere,
 		r, mu, mu_s, nu, ray_r_mu_intersects_ground);
-	// tex_cor
+	// tex_coord_x 获取 真正采样所期望的 coord
 	float tex_coord_x = uvwz.x * float(SCATTERING_TEXCOORD_NU_SIZE - 1);
+	// cai'y
 	float tex_x = floor(tex_coord_x);
 	float lerp = tex_coord_x - tex_x;
 	float3 uvw0 = float3( (tex_x + uvwz.y) / float(SCATTERING_TEXTURE_NU_SIZE), 
@@ -821,7 +822,7 @@ JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
 cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
-QwMzUzNDAwNiwtNTU4MTk5MTM0LC0xNDQ1NzAwNjI1LC0xNzY0
+Q4NTQ5Mzc1MSwtNTU4MTk5MTM0LC0xNDQ1NzAwNjI1LC0xNzY0
 MDU3NzMzLC0zNTc3MTUwNDEsNTk1MzA2OTgzLDgwNDk3MzA1My
 wtNDM2NTIxMjIwLC0yOTE0Mzg5NDAsLTkyMTkwOTE0NCwxMzcx
 MTU3OTc2LC0xMjA4MTcwNjMxLC0xNzI4MzQ0NTg5LC05NjYxMz
