@@ -794,7 +794,7 @@ float3 GetScattering(AtmosphereParameters atmosphere,
 	float tex_x = floor(tex_coord_x);
 	// 两个采样做插值的lerp值
 	float lerp = tex_coord_x - tex_x;
-	// mu_s
+	// mu_s : nu 组内 mu
 	float3 uvw0 = float3( (tex_x + uvwz.y) / float(SCATTERING_TEXTURE_NU_SIZE), 
 		uvwz.z, uvwz.w);
 	float3 uvw1 = float3( (tex_x + 1.0 + uvwz.y) / float(SCATTERING_TEXTURE_NU_SIZE), 
@@ -823,11 +823,11 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstOT
-Y5MDU2MzQzLDExMDkzOTg5NjEsLTU1ODE5OTEzNCwtMTQ0NTcw
-MDYyNSwtMTc2NDA1NzczMywtMzU3NzE1MDQxLDU5NTMwNjk4My
-w4MDQ5NzMwNTMsLTQzNjUyMTIyMCwtMjkxNDM4OTQwLC05MjE5
-MDkxNDQsMTM3MTE1Nzk3NiwtMTIwODE3MDYzMSwtMTcyODM0ND
-U4OSwtOTY2MTMzODkzLC0xNTM5NDM2MTk0LDc1NTMxNzYzMCwx
-NTc4NjI4Mzg0LDkzMTQwMTg1OCwtMTM4NTU3NzYwOF19
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstMT
+Y5NjUwNDMyNywtOTY5MDU2MzQzLDExMDkzOTg5NjEsLTU1ODE5
+OTEzNCwtMTQ0NTcwMDYyNSwtMTc2NDA1NzczMywtMzU3NzE1MD
+QxLDU5NTMwNjk4Myw4MDQ5NzMwNTMsLTQzNjUyMTIyMCwtMjkx
+NDM4OTQwLC05MjE5MDkxNDQsMTM3MTE1Nzk3NiwtMTIwODE3MD
+YzMSwtMTcyODM0NDU4OSwtOTY2MTMzODkzLC0xNTM5NDM2MTk0
+LDc1NTMxNzYzMCwxNTc4NjI4Mzg0LDkzMTQwMTg1OF19
 -->
