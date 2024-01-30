@@ -862,7 +862,7 @@ float3 GetScattering(
 * 如果散射层级 n ≥ 2:
 	* 用三重积分预先计算第 n 级的散射，其被积函数存在第 (n-1) 次散射纹理中。
 这样可以避免一些冗余计算但是不能完全杜绝，  
-比如下面点 p 和 点 p' 以及计算 n 次反射后从 ω 方向到达这两点的光所需要进行的计算。具体来讲包括 q 方向散射的辐亮度 radiance L 的计算，L 的计算包括 n-1 次反射后来自各个方向
+比如下面点 p 和 点 p' 以及计算 n 次反射后从 ω 方向到达这两点的光所需要进行的计算。具体来讲的辐亮度 radiance L 的计算，L 的计算包括 n-1 次反射后来自各个方向 和  q 方向散射
 
 ## 参考
 
@@ -884,8 +884,8 @@ X211X2ludGVyc2VjdHNfZ3JvdW5kIn19LCJjb21tZW50cyI6ey
 JKZjVSZ0JJeW5qVVBadTNIIjp7ImRpc2N1c3Npb25JZCI6IkZQ
 NnV1T0dwZDhaejU0V20iLCJzdWIiOiJnaDo3MzQxOTk1NCIsIn
 RleHQiOiLlsITnur/mmK/lkKblkozlnLDpnaLnm7jkuqQiLCJj
-cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlstND
-M0NDQ0NzE1LC0xMjg4NDUwNDM2LC00OTgxNzU1ODEsLTEzMzIz
+cmVhdGVkIjoxNzA2MTc4NjM0ODEzfX0sImhpc3RvcnkiOlsxOD
+MzODk3NjMwLC0xMjg4NDUwNDM2LC00OTgxNzU1ODEsLTEzMzIz
 MjY0MDAsLTM4NjY1OTk3MiwtMjEwMDczMjcyOSwyMTI4NDE3ND
 c5LC00MDA5MjQ2OTIsLTE0NjY4OTc5MzIsLTE1NjY0NzIxOSwt
 MTI3ODg2MzY1NCw1ODA1MzIyMjEsLTk2OTA1NjM0MywxMTA5Mz
